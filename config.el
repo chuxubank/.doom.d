@@ -19,7 +19,6 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :family "Sarasa Mono SC" :size 16))
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -33,6 +32,20 @@
 ;; `nil' to disable it:
 (setq display-line-numbers-type t)
 
+;; maximized at startup
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+;; set package archives
+(setq package-archives '(("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                         ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+;; projectile
+(setq projectile-project-search-path '("~/Developer"))
+;; org
+(setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
+;; org title
+(custom-set-faces
+ `(org-level-1 ((t (:inherit outline-1 :height 1.2))))
+ `(org-level-2 ((t (:inherit outline-2 :height 1.1)))))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -49,3 +62,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+(after! org
+  (setq org-src-preserve-indentation nil))
