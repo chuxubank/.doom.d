@@ -1,14 +1,13 @@
 ;;; input/liberime/config.el -*- lexical-binding: t; -*-
 
 ;;;###package pyim
+(setq-default pyim-punctuation-translate-p '(no yes auto)
+              pyim-english-input-switch-functions
+              '(pyim-probe-program-mode
+                pyim-probe-auto-english
+                pyim-probe-org-latex-mode))
 (after! pyim
-  (setq pyim-page-tooltip 'posframe
-        pyim-punctuation-translate-p '(no yes auto)
-        pyim-english-input-switch-functions
-        '(pyim-probe-program-mode
-          pyim-probe-auto-english
-          pyim-probe-org-latex-mode))
-  )
+  (setq pyim-page-tooltip 'posframe))
 
 ;;;###package pangu-spacing
 (global-pangu-spacing-mode t)
