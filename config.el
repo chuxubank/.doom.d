@@ -34,14 +34,12 @@
 
 ;; maximized at startup
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
 ;; set package archives
 (setq package-archives '(("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
                          ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
                          ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
-;; projectile
-(setq projectile-project-search-path '("~/Developer"))
-;; org
-(setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
+
 ;; org title
 (custom-set-faces
  `(org-level-1 ((t (:inherit outline-1 :height 1.2))))
@@ -63,5 +61,24 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
+;;;###package org
+(setq org-bullets-bullet-list '("■" "◆" "▲" "▶")
+      org-preview-latex-default-process 'dvisvgm
+      org-latex-image-default-width ".6\\linewidth"
+      org-publish-project-alist
+      '(("UNGEE"
+         :base-directory "~/Developer/UNGEE"
+         :publishing-directory "~/Documents/UNGEE"
+         :publishing-function org-latex-publish-to-pdf
+         :recursive t)))
 (after! org
   (setq org-src-preserve-indentation nil))
+
+;;;###package org-drill
+(setq org-drill-scope 'file-no-restriction)
+
+;;;###package projectile
+(setq projectile-project-search-path '("~/Developer"))
+
+;;;###package leetcode
+(setq leetcode-prefer-language "cpp")
