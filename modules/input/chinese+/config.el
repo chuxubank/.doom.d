@@ -1,4 +1,4 @@
-;;; input/liberime/config.el -*- lexical-binding: t; -*-
+;;; input/chinese+/config.el -*- lexical-binding: t; -*-
 
 ;;;###package pyim
 (setq-default pyim-punctuation-translate-p '(no yes auto)

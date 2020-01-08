@@ -1,5 +1,5 @@
 ;; -*- no-byte-compile: t; -*-
-;;; input/liberime/packages.el
+;;; input/chinese+/packages.el
 
 (package! posframe)
 (package! liberime-config
