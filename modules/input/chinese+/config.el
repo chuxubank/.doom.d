@@ -18,6 +18,12 @@
   (liberime-select-schema "luna_pinyin_simp")
   (setq pyim-default-scheme 'rime-quanpin))
 
+;;;###package org
+(setq org-latex-compiler "xelatex")
+(after! org
+  (add-to-list 'org-latex-packages-alist
+               '("" "ctex" t ("xelatex"))))
+
 (map!
  "s-i" #'pyim-convert-string-at-point
  "s-l" #'liberime-load)
