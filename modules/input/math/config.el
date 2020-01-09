@@ -15,3 +15,9 @@
         (98 "\\bm" nil t nil nil)))
 (setq cdlatex-math-symbol-alist
       '((76 ("\\Lambda" "\\varLambda"))))
+
+;;;###package smartpart
+(after! smartparens
+  (sp-with-modes '(org-mode latex-mode) ; actually the cdlatex can handle insert action in latex-mode
+    (sp-local-pair "$" "$")
+    (sp-local-pair "\\[" "\\]")))

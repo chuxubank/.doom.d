@@ -82,3 +82,6 @@
 
 ;;;###package leetcode
 (setq leetcode-prefer-language "cpp")
+
+;;;###package evil
+(setq! evil-disable-insert-state-bindings t)
