@@ -72,7 +72,9 @@
          :publishing-function org-latex-publish-to-pdf
          :recursive t)))
 (after! org
-  (setq org-src-preserve-indentation nil))
+  (setq org-src-preserve-indentation nil)
+  (setq org-highlight-latex-and-related '(latex script entities)) ; Fontify latex blocks with no color and pretty fonts to prevent org table align mess
+)
 
 ;;;###package org-drill
 (setq org-drill-scope 'file-no-restriction)
