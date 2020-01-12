@@ -14,6 +14,7 @@
 (setq pangu-spacing-real-insert-separtor t)
 
 ;;;###package liberime
+(setq liberime-user-data-dir (expand-file-name "rime/" doom-local-dir))
 (add-hook! 'after-liberime-load-hook
   (liberime-select-schema "luna_pinyin_simp")
   (setq pyim-default-scheme 'rime-quanpin))
