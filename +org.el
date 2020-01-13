@@ -14,9 +14,6 @@
   (setq org-highlight-latex-and-related '(latex script entities)) ; Fontify latex blocks with no color and pretty fonts to prevent org table align mess
 )
 
-;;;###package org-drill
-(setq org-drill-scope 'file-no-restriction)
-
 ;; org title
 (custom-set-faces
  `(org-level-1 ((t (:inherit outline-1 :height 1.2))))
