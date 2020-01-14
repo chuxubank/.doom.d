@@ -59,9 +59,6 @@
 ;;;###package projectile
 (setq projectile-project-search-path '("~/Developer"))
 
-;;;###package leetcode
-(setq leetcode-prefer-language "cpp")
-
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
 
