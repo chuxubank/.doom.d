@@ -22,12 +22,6 @@
 ;; org todo
 (setq org-log-done 'time)
 
-;; org diary
-(setq org-agenda-include-diary t)
-(require 'org-mac-iCal)
-
-(add-hook! 'org-agenda-mode-hook #'org-mac-iCal)
-
 ;; org title
 (custom-set-faces
  `(org-level-1 ((t (:inherit outline-1 :height 1.2))))
