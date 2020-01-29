@@ -10,13 +10,14 @@
       org-startup-with-inline-images t
       org-image-actual-width '(500))
 (after! org
-  (setq org-src-preserve-indentation nil) ; make org src block content indent relate to #+bagin_src block
-  (setq org-highlight-latex-and-related '(latex script entities)) ; Fontify latex blocks with no color and pretty fonts to prevent org table align mess
+  ;; make org src block content indent relate to #+bagin_src block
+  (setq org-src-preserve-indentation nil)
+  ;; Fontify latex blocks with no color and pretty fonts to prevent org table align mess
+  (setq org-highlight-latex-and-related '(latex script entities))
   ;; org link
   (pushnew! org-link-abbrev-alist
             '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
             '("wiki"    . "https://en.wikipedia.org/wiki/%s"))
-
   )
 
 ;; org todo
