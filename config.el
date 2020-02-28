@@ -62,4 +62,6 @@
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
 
+(nconc +format-on-save-enabled-modes (list 'nxml-mode))
+
 (load! "+org")
