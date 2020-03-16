@@ -1,7 +1,7 @@
 ;;; ~/.doom.d/+org.el -*- lexical-binding: t; -*-
 
 ;;;###package org
-(setq org-bullets-bullet-list '("■" "◆" "▲" "▶")
+(setq org-bullets-bullet-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷")
       org-publish-project-alist '(("UNGEE"
                                    :base-directory "~/Developer/UNGEE"
                                    :publishing-directory "~/Documents/UNGEE"
@@ -18,7 +18,11 @@
   (pushnew! org-link-abbrev-alist
             '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
             '("wiki"    . "https://en.wikipedia.org/wiki/%s"))
-  )
+  ;; org todo file
+  (setq +org-capture-todo-file "inbox.org"))
+
+;; org mobile
+(setq org-mobile-directory "~/Nutstore Files/org")
 
 ;; org todo
 (setq org-log-done 'time)

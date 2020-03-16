@@ -23,10 +23,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. These are the defaults.
-(setq doom-theme 'doom-one)
-
-;; If you intend to use org, it is recommended you change this!
-(setq org-directory "~/org/")
+(setq doom-theme 'doom-dracula)
 
 ;; If you want to change the style of line numbers, change this to `relative' or
 ;; `nil' to disable it:
@@ -62,6 +59,6 @@
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
 
-(nconc +format-on-save-enabled-modes (list 'nxml-mode))
+(appendq! +format-on-save-enabled-modes '(nxml-mode))
 
 (load! "+org")
