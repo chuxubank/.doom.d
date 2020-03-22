@@ -61,4 +61,7 @@
 
 (appendq! +format-on-save-enabled-modes '(nxml-mode))
 
+(map! :leader
+      "h d U" #'doom/upgrade)
+
 (load! "+org")
