@@ -5,4 +5,4 @@
 (package! posframe)
 (package! liberime
   :recipe (:host github :repo "merrickluo/liberime" :files ("CMakeLists.txt" "Makefile" "src" "liberime*.el"))
-  :pin "8c84d5daa2")
+  :pin "9e05c6fb69")
