@@ -32,11 +32,6 @@
 ;; maximized at startup
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
-;; set package archives
-(setq package-archives '(("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-                         ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
-
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
