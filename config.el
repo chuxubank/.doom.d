@@ -58,6 +58,7 @@
 
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
+(evil-set-initial-state 'osx-dictionary-mode 'emacs)
 
 (appendq! +format-on-save-enabled-modes '(nxml-mode))
 
