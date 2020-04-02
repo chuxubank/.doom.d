@@ -1,8 +1,7 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; input/chinese+/packages.el
 
-(package! pyim :pin "6871fb6f76")
 (package! posframe)
-(package! liberime
-  :recipe (:host github :repo "merrickluo/liberime" :files ("CMakeLists.txt" "Makefile" "src" "liberime*.el"))
-  :pin "9e05c6fb69")
+(package! rime
+  :recipe (:host github :repo "DogLooksGood/emacs-rime" :files ("*.el" "Makefile" "lib.c")))
+(package! pangu-spacing)

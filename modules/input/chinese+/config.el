@@ -1,23 +1,24 @@
 ;;; input/chinese+/config.el -*- lexical-binding: t; -*-
 
-;;;###package pyim
-(setq-default pyim-punctuation-translate-p '(no yes auto)
-              pyim-english-input-switch-functions
-              '(pyim-probe-program-mode
-                pyim-probe-auto-english
-                pyim-probe-org-latex-mode))
-(after! pyim
-  (setq pyim-page-tooltip 'posframe))
+(use-package! rime
+  :custom
+  (default-input-method "rime")
+  (rime-librime-root (expand-file-name "librime/dist" doom-local-dir))
+  (rime-user-data-dir (expand-file-name "rime" doom-local-dir))
+  (rime-show-candidate 'posframe)
+  (rime-posframe-properties (list :font "Sarasa UI SC"
+                                  :internal-border-width 10))
+  (rime-posframe-style 'vertical)
+  (rime-cursor "˰")
+  (rime-disable-predicates '(rime-predicate-evil-mode-p
+                             rime-predicate-after-alphabet-char-p
+                             rime-predicate-prog-in-code-p)))
 
-;;;###package pangu-spacing
-(global-pangu-spacing-mode t)
-(setq pangu-spacing-real-insert-separtor t)
-
-;;;###package liberime
-(setq liberime-user-data-dir (expand-file-name "rime/" doom-local-dir))
-(add-hook! 'liberime-after-start-hook
-  (liberime-select-schema "luna_pinyin_simp")
-  (setq pyim-default-scheme 'rime-quanpin))
+(use-package! pangu-spacing
+  :hook (text-mode . pangu-spacing-mode)
+  :config
+  ;; Always insert `real' space in org-mode.
+  (setq-hook! 'org-mode-hook pangu-spacing-real-insert-separtor t))
 
 ;;;###package org
 (setq org-latex-compiler "xelatex"
@@ -34,7 +35,6 @@
                                                          :latex-compiler ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")
                                                          :image-converter ("dvisvgm %f -n -b min -c %S -o %O"))))
 
-
-(map!
- "s-i" #'pyim-convert-string-at-point
- "s-l" #'liberime-load)
+(map! :map rime-mode-map
+      "C-`" 'rime-send-keybinding
+      "s-i" 'rime-force-enable)
