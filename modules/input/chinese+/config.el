@@ -6,13 +6,12 @@
   (rime-librime-root (expand-file-name "librime/dist" doom-local-dir))
   (rime-user-data-dir (expand-file-name "rime" doom-local-dir))
   (rime-show-candidate 'posframe)
-  (rime-posframe-properties (list :font "Sarasa UI SC"
-                                  :internal-border-width 10))
   (rime-posframe-style 'vertical)
   (rime-cursor "˰")
   (rime-disable-predicates '(rime-predicate-evil-mode-p
-                             rime-predicate-after-alphabet-char-p
-                             rime-predicate-prog-in-code-p)))
+                             rime-predicate-after-ascii-char-p
+                             rime-predicate-prog-in-code-p
+                             rime-predicate-org-latex-mode-p)))
 
 (use-package! pangu-spacing
   :hook (text-mode . pangu-spacing-mode)
