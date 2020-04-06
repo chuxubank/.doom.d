@@ -11,7 +11,8 @@
   (rime-disable-predicates '(rime-predicate-evil-mode-p
                              rime-predicate-after-ascii-char-p
                              rime-predicate-prog-in-code-p
-                             rime-predicate-org-latex-mode-p)))
+                             rime-predicate-org-latex-mode-p
+                             rime-predicate-org-in-src-block-p)))
 
 (use-package! pangu-spacing
   :hook (text-mode . pangu-spacing-mode)
