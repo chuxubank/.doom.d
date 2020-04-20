@@ -66,6 +66,7 @@
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
        ;;ibuffer         ; interactive buffer management
+       undo              ; persistent, smarter undo for your inevitable mistakes
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -142,7 +143,9 @@
         +jupyter        ; ipython/jupyter support for babel
         ;;+pandoc          ; export-with-pandoc support
         +pomodoro        ; be fruitful with the tomato technique
-        +present)        ; using org-mode for presentations
+        +present        ; using org-mode for presentations
+        +roam
+        +noter)
        ;;perl              ; write code no one else can comprehend
        ;;php               ; perl's insecure younger brother
        plantuml          ; diagrams for confusing people more

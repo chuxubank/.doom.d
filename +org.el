@@ -1,7 +1,7 @@
 ;;; ~/.doom.d/+org.el -*- lexical-binding: t; -*-
 
 ;;;###package org
-(setq org-bullets-bullet-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷")
+(setq org-superstar-headline-bullets-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷")
       org-publish-project-alist '(("UNGEE"
                                    :base-directory "~/Developer/UNGEE"
                                    :publishing-directory "~/Documents/UNGEE"
