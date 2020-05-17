@@ -21,9 +21,6 @@
   ;; org todo file
   (setq +org-capture-todo-file "inbox.org"))
 
-;; org mobile
-(setq org-mobile-directory "~/Nutstore Files/org")
-
 ;; org todo
 (setq org-log-done 'time)
 
