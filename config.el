@@ -53,8 +53,16 @@
 
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
-(evil-set-initial-state 'osx-dictionary-mode 'emacs)
+(set-evil-initial-state!
+  '(osx-dictionary-mode
+    pdf-tools-modes
+    pdf-annot-list-mode)
+  'emacs)
 
+;;;###package evil-collection
+(appendq! +evil-collection-disabled-list '(pdf))
+
+;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode))
 
 (map! :leader
