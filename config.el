@@ -64,4 +64,11 @@
 (map! :leader
       "h d U" #'doom/upgrade)
 
+(map! :after evil-org
+      :map evil-org-mode-map
+      :i "C-l" nil
+      :i "C-h" nil
+      :i "C-k" nil
+      :i "C-j" nil)
+
 (load! "+org")
