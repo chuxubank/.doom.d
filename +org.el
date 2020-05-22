@@ -1,14 +1,22 @@
 ;;; ~/.doom.d/+org.el -*- lexical-binding: t; -*-
 
-;;;###package org
-(setq org-superstar-headline-bullets-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷")
-      org-publish-project-alist '(("UNGEE"
-                                   :base-directory "~/Developer/UNGEE"
-                                   :publishing-directory "~/Documents/UNGEE"
-                                   :publishing-function org-latex-publish-to-pdf
-                                   :recursive t))
+(setq org-superstar-headline-bullets-list
+      '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷")
+      ;; inline image
       org-startup-with-inline-images t
-      org-image-actual-width '(500))
+      org-image-actual-width '(500)
+      ;; org todo
+      org-log-done 'time
+      ;; org export
+      org-export-with-toc nil
+      org-publish-project-alist
+      '(("UNGEE"
+         :base-directory "~/Developer/UNGEE"
+         :publishing-directory "~/Documents/UNGEE"
+         :publishing-function org-latex-publish-to-pdf
+         :recursive t))
+)
+
 (after! org
   ;; make org src block content indent relate to #+bagin_src block
   (setq org-src-preserve-indentation nil)
@@ -21,17 +29,13 @@
   ;; org todo file
   (setq +org-capture-todo-file "inbox.org"))
 
-;; org todo
-(setq org-log-done 'time)
-
 ;; org title
 (custom-set-faces
  `(org-level-1 ((t (:inherit outline-1 :height 1.2))))
  `(org-level-2 ((t (:inherit outline-2 :height 1.1)))))
 
-;; org export
-(setq org-export-with-toc nil
-      org-latex-image-default-width ".6\\linewidth")
+;; org latex
+(setq org-latex-image-default-width ".6\\linewidth")
 (setq! org-latex-default-packages-alist
        '(("AUTO"            "inputenc"  t ("pdflatex"))
          ("T1"              "fontenc"   t ("pdflatex"))
