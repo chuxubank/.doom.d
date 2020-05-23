@@ -1,0 +1,22 @@
+* Misaka's doom-emacs config
+** macOS
+** Windows
+*** Install prerequirements
+#+begin_src sh
+  scoop install aria2 # speed up the download
+  scoop bucket add extras
+  scoop install powertoys # swipe Caps Lock and left Ctrl and many other features...
+  scoop install fd ripgrep editorconfig gcc llvm plantuml openjdk latex sudo ln which emacs
+  scoop bucket add nerd-fonts
+  scoop install sarasagothic-ttc
+#+end_src
+*** Startup Path
+You can change the emacs's shortcut created by scoop in the Start Menu, changing the =Start in:= property to the path you want to start.
+*** Org (beorg)
+1. Install iCloud in Microsoft Store
+2. Link the directory
+   #+begin_src sh
+     sudo ln -s '.\iCloudDrive\iCloud~com~appsonthemove~beorg\org\' org
+   #+end_src
+*** UTF-8
+In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change system locale... -> [x] Beta: Use Unicode UTF-8 for worldwide language support~.
