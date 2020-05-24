@@ -6,10 +6,18 @@
   scoop install aria2 # speed up the download
   scoop bucket add extras
   scoop install powertoys # swipe Caps Lock and left Ctrl and many other features...
-  scoop install fd ripgrep editorconfig gcc llvm plantuml openjdk latex sudo ln which emacs
+  scoop install fd ripgrep editorconfig plantuml openjdk latex sudo ln which emacs
   scoop bucket add nerd-fonts
   scoop install sarasagothic-ttc
 #+end_src
+*** Init file
+#+begin_src sh
+  cd ~
+  git clone --depth 1 https://github.com/hlissner/doom-emacs .emacs.d
+  git clone https://github.com/chuxubank/.doom.d.git
+  ~/.emacs.d/bin/doom install
+#+end_src
+Add the ~HOME~ Path environment, see also [[https://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Location-of-init-file.html][Where do I put my init file?]]
 *** Startup Path
 You can change the emacs's shortcut created by scoop in the Start Menu, changing the =Start in:= property to the path you want to start.
 *** Org (beorg)
