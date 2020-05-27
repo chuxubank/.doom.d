@@ -27,6 +27,7 @@
        nav-flash
        ophints
        (popup +defaults)
+       treemacs
        vc-gutter
        vi-tilde-fringe
        window-select
