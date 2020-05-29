@@ -3,7 +3,8 @@
 (use-package! rime
   :custom
   (default-input-method "rime")
-  (rime-librime-root (expand-file-name "librime/dist" doom-local-dir))
+  (when IS-MAC
+    (rime-librime-root (expand-file-name "librime/dist" doom-local-dir)))
   (rime-user-data-dir (expand-file-name "rime" doom-local-dir))
   (rime-show-candidate 'posframe)
   (rime-posframe-style 'vertical)
@@ -13,6 +14,9 @@
                              rime-predicate-prog-in-code-p
                              rime-predicate-org-latex-mode-p
                              rime-predicate-org-in-src-block-p)))
+
+(when IS-WINDOWS
+  (setq! rime-share-data-dir "c:/Program Files (x86)/Rime/weasel-0.14.3/data"))
 
 (use-package! pangu-spacing
   :hook (text-mode . pangu-spacing-mode)
