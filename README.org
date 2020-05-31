@@ -1,15 +1,6 @@
 * Misaka's doom-emacs config
 ** macOS
 ** Windows
-*** Install prerequirements
-#+begin_src sh
-  scoop install aria2 # speed up the download
-  scoop bucket add extras
-  scoop install powertoys # swipe Caps Lock and left Ctrl and many other features...
-  scoop install fd ripgrep editorconfig plantuml openjdk latex sudo ln which emacs
-  scoop bucket add nerd-fonts
-  scoop install sarasagothic-ttc
-#+end_src
 *** Init file
 #+begin_src sh
   cd ~
@@ -17,14 +8,40 @@
   git clone https://github.com/chuxubank/.doom.d.git
   ~/.emacs.d/bin/doom install
 #+end_src
-Add the ~HOME~ Path environment, see also [[https://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Location-of-init-file.html][Where do I put my init file?]]
-*** Startup Path
-You can change the emacs's shortcut created by scoop in the Start Menu, changing the =Start in:= property to the path you want to start.
+
+You can then add =~/.emacs.d/bin/doom= to your Windows Path environment.
+
+*** MSYS2 config
+Install [[https://www.msys2.org/][MSYS2]].
+- set ~MSYS2_PATH_TYPE=1~ in Windows environment.
+- set ~MSYS2_ARG_CONV_EXCL=--path-separator=~ in Windows environment. (fix the ~fd~ path issue in msys2)
+
+I use mingw64 terminal as my default one, which has all path in environment and no more config needed (It defines the =HOME= and =SHELL= environment).
+
+#+begin_src bash
+  pacman -S pactoys base-devel # pactoys use shortcut to install mingw64 packages, base-devel is needed by pdf-tools and emacs-rime
+  pacboy -S emacs:x toolchain:x librime:x librime-data:x
+#+end_src
+
+*** Install tools
+#+begin_src sh
+  scoop install aria2 # speed up the download
+  scoop bucket add extras
+  scoop install powertoys # swipe Caps Lock and left Ctrl and many other features...
+  scoop install fd ripgrep editorconfig plantuml openjdk latex sudo ln which
+  scoop bucket add nerd-fonts
+  scoop install sarasagothic-ttc
+#+end_src
+
+*** GUI shortcut
+You can add a shortcut to =C:\msys64\mingw64\bin\runemacs.exe= and rename the shortcut to Emacs, then changing the =Start in:= property to the path you want to start.
+
 *** Org (beorg)
 1. Install iCloud in Microsoft Store
 2. Link the directory
    #+begin_src sh
      sudo ln -s '.\iCloudDrive\iCloud~com~appsonthemove~beorg\org\' org
    #+end_src
+
 *** UTF-8
 In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change system locale... -> [x] Beta: Use Unicode UTF-8 for worldwide language support~.
