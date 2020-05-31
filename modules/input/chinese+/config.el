@@ -15,9 +15,6 @@
                              rime-predicate-org-latex-mode-p
                              rime-predicate-org-in-src-block-p)))
 
-(when IS-WINDOWS
-  (setq! rime-share-data-dir "c:/Program Files (x86)/Rime/weasel-0.14.3/data"))
-
 (use-package! pangu-spacing
   :hook (text-mode . pangu-spacing-mode)
   :config
