@@ -68,6 +68,7 @@
 
        :lang
        (cc +lsp)
+       (:if IS-MAC clojure)
        data
        emacs-lisp
        (java +lsp)
