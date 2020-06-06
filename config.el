@@ -51,6 +51,12 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+(use-package! nyan-mode
+  :custom
+  (nyan-animate-nyancat t)
+  (nyan-wavy-trail t)
+  :hook
+  (doom-modeline-mode . nyan-mode))
 
 ;;;###package projectile
 (setq projectile-project-search-path '("~/Developer"))
