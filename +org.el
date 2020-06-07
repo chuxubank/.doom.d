@@ -54,12 +54,13 @@
 ;; org preview
 (setq org-preview-latex-default-process 'xdvsvg)
 (after! org
-  (add-to-list 'org-preview-latex-process-alist
-               '(xdvsvg :programs ("xelatex" "dvisvgm")
-                        :description "xdv > svg"
-                        :message "you need to install the programs: xelatex and dvisvgm."
-                        :image-input-type "xdv"
-                        :image-output-type "svg"
-                        :image-size-adjust (1.7 . 1.5)
-                        :latex-compiler ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")
-                        :image-converter ("dvisvgm %f -n -b min -c %S -o %O"))))
+  (pushnew! org-preview-latex-process-alist
+            '(xdvsvg :programs ("xelatex" "dvisvgm")
+                     :description "xdv > svg"
+                     :message "you need to install the programs: xelatex and dvisvgm."
+                     :image-input-type "xdv"
+                     :image-output-type "svg"
+                     :image-size-adjust (1.7 . 1.5)
+                     :latex-compiler ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")
+                     :image-converter ("dvisvgm %f -n -b min -c %S -o %O")))
+  (+org-refresh-latex-background-h))
