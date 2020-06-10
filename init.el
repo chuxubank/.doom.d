@@ -81,6 +81,7 @@
        sh
        (:if IS-MAC (swift +lsp))
        web
+       yaml
 
        :app
        (rss +org)
