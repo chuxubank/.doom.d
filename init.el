@@ -73,6 +73,7 @@
        emacs-lisp
        (java +lsp)
        (javascript +lsp)
+       (kotlin +lsp)
        latex
        markdown
        (org +dragndrop +hugo +jupyter +pomodoro +present +roam +noter)
