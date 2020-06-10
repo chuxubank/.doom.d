@@ -71,6 +71,9 @@
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode))
 
+;;;###package magit
+(setq! magit-clone-url-format "https://%h/%n.git")
+
 (map! :leader
       "h d U" #'doom/upgrade)
 
