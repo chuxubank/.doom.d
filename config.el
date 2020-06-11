@@ -61,6 +61,9 @@
 ;;;###package projectile
 (setq projectile-project-search-path '("~/Developer"))
 
+;;;###package magit
+(setq magit-repository-directories '(("~/Developer" . 3)))
+
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
 (set-evil-initial-state!
