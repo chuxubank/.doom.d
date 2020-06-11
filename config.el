@@ -62,7 +62,8 @@
 (setq projectile-project-search-path '("~/Developer"))
 
 ;;;###package magit
-(setq magit-repository-directories '(("~/Developer" . 3)))
+(setq magit-repository-directories '(("~/Developer" . 3))
+      magit-clone-url-format "https://%h/%n.git")
 
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
@@ -73,9 +74,6 @@
 
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode))
-
-;;;###package magit
-(setq! magit-clone-url-format "https://%h/%n.git")
 
 (map! :leader
       "h d U" #'doom/upgrade)
