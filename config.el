@@ -58,6 +58,11 @@
   :hook
   (doom-modeline-mode . nyan-mode))
 
+(use-package! org-roam-server
+  :after org-roam
+  :hook
+  (org-roam-mode . org-roam-server-mode))
+
 ;;;###package projectile
 (setq projectile-project-search-path '("~/Developer"))
 
