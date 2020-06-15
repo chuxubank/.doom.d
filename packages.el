@@ -23,7 +23,6 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
 (package! nyan-mode :pin "06e67ab2c490756d3eeed4a68aba7c33e508a5d5")
-(package! org-roam-server :pin "d418c632e34951d844a408ed703bb2029fdd73f2")
 
 ;; To install a package directly from a particular repo, you'll need to specify
 ;; a `:recipe'. You'll find documentation on what `:recipe' accepts here:

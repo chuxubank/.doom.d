@@ -2,3 +2,17 @@
 
 ;;;###package org-drill
 (setq org-drill-scope 'file-no-restriction)
+
+(use-package! bing-dict
+  :after org
+  :config
+  (setq bing-dict-vocabulary-save t
+        bing-dict-vocabulary-file (expand-file-name "vocabulary.org" org-directory)))
+
+;;;###package org-roam
+(setq! org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
+
+(use-package! org-roam-server
+  :after org-roam
+  :hook
+  (org-roam-mode . org-roam-server-mode))
