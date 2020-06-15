@@ -73,7 +73,7 @@
   'emacs)
 
 ;;;###package format-all
-(appendq! +format-on-save-enabled-modes '(nxml-mode))
+(appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
 (map! :leader
       "h d U" #'doom/upgrade
