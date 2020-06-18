@@ -1,4 +1,4 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; study/leetcode/packages.el
 
-(package! leetcode :pin "c4f793ecfe3723c7e121909ec59191c6e89f4d78")
+(package! leetcode :pin "ef59344158ae4b7842ca2531ec77c439ed6e6997")
