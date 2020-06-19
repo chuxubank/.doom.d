@@ -76,8 +76,8 @@
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
 (map! :leader
-      "h d U" #'doom/upgrade
-      "d" #'bing-dict-brief)
+      "h d U" #'doom/upgrade)
+
 
 (map! :after evil-org
       :map evil-org-mode-map

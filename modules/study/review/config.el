@@ -1,12 +1,12 @@
 ;;; study/review/config.el -*- lexical-binding: t; -*-
 
-;;;###package org-drill
-(setq org-drill-scope 'file-no-restriction)
+(use-package! org-drill
+  :commands #'org-drill
+  :custom
+  (org-drill-scope 'file-no-restriction))
 
 (use-package! org-fc
-  :after hydra
-  :custom
-  (org-fc-directories '("~/org"))
+  :after org
   :config
   (require 'org-fc-hydra))
 
@@ -22,4 +22,6 @@
   :after org
   :config
   (setq bing-dict-vocabulary-save t
-        bing-dict-vocabulary-file (expand-file-name "vocabulary.org" org-directory)))
+        bing-dict-show-thesaurus 'both
+        bing-dict-vocabulary-file (expand-file-name "vocabulary.org" org-directory))
+  :bind ("C-c d" . #'bing-dict-brief))
