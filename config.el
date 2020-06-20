@@ -87,3 +87,4 @@
       :i "C-j" nil)
 
 (load! "+org")
+(load! "+latex")

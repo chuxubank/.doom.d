@@ -1,5 +1,7 @@
 ;;; ~/.doom.d/+latex.el -*- lexical-binding: t; -*-
 
+(setq +latex-viewers '(pdf-tools))
+
 ;;;###package cdlatex
 (setq cdlatex-env-alist
       '(("equation*" "\\begin{equation*}\n?\n\\end{equation*}" nil)
@@ -14,6 +16,11 @@
         (98 "\\bm" nil t nil nil)))
 (setq cdlatex-math-symbol-alist
       '((76 ("\\Lambda" "\\varLambda"))))
+
+(after! cdlatex
+  (setq cdlatex-use-dollar-to-ensure-math t)
+  (map! :map cdlatex-mode-map
+        "TAB" #'cdlatex-tab))
 
 ;;;###package smartparens
 (after! smartparens
