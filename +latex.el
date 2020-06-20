@@ -1,7 +1,6 @@
-;;; input/math/config.el -*- lexical-binding: t; -*-
+;;; ~/.doom.d/+latex.el -*- lexical-binding: t; -*-
 
 ;;;###package cdlatex
-(add-hook! '(org-mode-hook LaTeX-mode-hook) #'turn-on-org-cdlatex)
 (setq cdlatex-env-alist
       '(("equation*" "\\begin{equation*}\n?\n\\end{equation*}" nil)
         ("cases" "\\begin{cases}\n? & ,\\\\\n & .\n\\end{cases}" nil)
@@ -18,6 +17,6 @@
 
 ;;;###package smartparens
 (after! smartparens
-  (sp-with-modes '(org-mode latex-mode) ; actually the cdlatex can handle insert action in latex-mode
+  (sp-with-modes '(org-mode)
     (sp-local-pair "$" "$")
     (sp-local-pair "\\[" "\\]")))

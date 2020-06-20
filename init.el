@@ -74,7 +74,7 @@
        (java +lsp)
        (javascript +lsp)
        (kotlin +lsp)
-       latex
+       (latex +latexmk +cdlatex +lsp +fold)
        markdown
        (org +dragndrop +hugo +jupyter +pomodoro +present +roam +noter)
        plantuml
@@ -92,7 +92,6 @@
 
        :input
        chinese+
-       math
 
        :study
        review

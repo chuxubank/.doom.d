@@ -63,4 +63,4 @@
                      :image-size-adjust (1.7 . 1.5)
                      :latex-compiler ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")
                      :image-converter ("dvisvgm %f -n -b min -c %S -o %O")))
-  (+org-refresh-latex-background-h))
+  (add-hook! 'org-mode-hook #'+org-refresh-latex-background-h))
