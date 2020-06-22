@@ -16,6 +16,7 @@
 (after! org
   (setq org-src-preserve-indentation nil)
   (setq +org-capture-todo-file "inbox.org")
+  (add-to-list 'org-modules 'org-habit)
   (pushnew! org-link-abbrev-alist
             '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
             '("wiki"    . "https://en.wikipedia.org/wiki/%s")))
