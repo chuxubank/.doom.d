@@ -6,7 +6,7 @@
   (org-drill-scope 'file-no-restriction))
 
 (use-package! org-fc
-  :after org
+  :after (org hydra)
   :config
   (require 'org-fc-hydra))
 
