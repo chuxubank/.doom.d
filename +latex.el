@@ -2,6 +2,8 @@
 
 (setq +latex-viewers '(pdf-tools))
 
+(setq-default TeX-engine 'xetex)
+
 ;;;###package cdlatex
 (setq cdlatex-env-alist
       '(("equation*" "\\begin{equation*}\n?\n\\end{equation*}" nil)
