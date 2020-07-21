@@ -29,6 +29,9 @@
   ;; Always insert `real' space in org-mode.
   (setq-hook! 'org-mode-hook pangu-spacing-real-insert-separtor t))
 
+(use-package! valign
+  :hook (org-mode . valign-mode))
+
 (map! :map rime-mode-map
       "C-`" 'rime-send-keybinding
       "s-i" 'rime-force-enable)
