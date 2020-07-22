@@ -14,8 +14,9 @@
          :recursive t)))
 
 (after! org
-  (setq org-src-preserve-indentation nil)
-  (setq +org-capture-todo-file "inbox.org")
+  (setq org-src-preserve-indentation nil
+        +org-capture-todo-file "inbox.org"
+        org-agenda-files (directory-files-recursively org-directory (rx ".org" eos)))
   (add-to-list 'org-modules 'org-habit)
   (pushnew! org-link-abbrev-alist
             '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
