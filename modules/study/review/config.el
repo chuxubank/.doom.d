@@ -13,11 +13,6 @@
 ;;;###package org-roam
 (setq! org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
 
-(use-package! org-roam-server
-  :after org-roam
-  :hook
-  (org-roam-mode . org-roam-server-mode))
-
 (use-package! bing-dict
   :after org
   :config
