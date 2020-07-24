@@ -3,12 +3,17 @@
 (use-package! org-drill
   :commands #'org-drill
   :custom
-  (org-drill-scope 'file-no-restriction))
+  (org-drill-scope 'agenda))
 
 (use-package! org-fc
   :after (org hydra)
   :config
   (require 'org-fc-hydra))
+
+(use-package! anki-editor
+  :after org
+  :custom
+  (anki-editor-latex-style 'mathjax))
 
 ;;;###package org-roam
 (setq! org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
