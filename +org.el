@@ -64,5 +64,4 @@
                      :image-output-type "svg"
                      :image-size-adjust (1.7 . 1.5)
                      :latex-compiler ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")
-                     :image-converter ("dvisvgm %f -n -b min -c %S -o %O")))
-  (add-hook! 'org-mode-hook #'+org-refresh-latex-background-h))
+                     :image-converter ("dvisvgm %f -n -b min -c %S -o %O"))))
