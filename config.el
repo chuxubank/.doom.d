@@ -1,62 +1,44 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; refresh' after modifying this file!
-
-
-;; These are used for a number of things, particularly for GPG configuration,
-;; some email clients, file templates and snippets.
 (setq user-full-name "Misaka"
-      user-mail-address "chuxubank@qq.com")
+      user-mail-address "chuxubank@qq.com"
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
-;; are the three important ones:
-;;
-;; + `doom-font'
-;; + `doom-variable-pitch-font'
-;; + `doom-big-font' -- used for `doom-big-font-mode'
-;;
-;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
-;; font string. You generally only need these two:
-(if IS-WINDOWS
-    (setq doom-font (font-spec :family "Sarasa Mono SC")
-          doom-unicode-font (font-spec :family "Sarasa Mono SC"))
-  (setq doom-font (font-spec :family "Sarasa Mono SC" :size 16)))
-(setq doom-variable-pitch-font (font-spec :family "Sarasa Mono SC"))
+      doom-theme 'doom-dracula
+      display-line-numbers-type 'relative)
 
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. These are the defaults.
-(setq doom-theme 'doom-dracula)
-
-;; If you want to change the style of line numbers, change this to `relative' or
-;; `nil' to disable it:
-(setq display-line-numbers-type 'relative)
-
-;; maximized at startup
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
-
-;; Here are some additional functions/macros that could help you configure Doom:
-;;
-;; - `load!' for loading external *.el files relative to this one
-;; - `use-package' for configuring packages
-;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', where Emacs
-;;   looks when you load packages with `require' or `use-package'.
-;; - `map!' for binding new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c g k').
-;; This will open documentation for it, including demos of how they are used.
-;;
-;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
-;; they are implemented.
 (use-package! nyan-mode
   :custom
   (nyan-animate-nyancat t)
   (nyan-wavy-trail t)
   :hook
   (doom-modeline-mode . nyan-mode))
+
+
+;;
+;;; UI
+
+(setq doom-font (font-spec :family "monospace" :size 16))
+
+;; maximized at startup
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+
+;;
+;;; Keybinds
+
+(map! :leader
+      "h d U" #'doom/upgrade)
+
+(map! :after evil-org
+      :map evil-org-mode-map
+      :i "C-l" nil
+      :i "C-h" nil
+      :i "C-k" nil
+      :i "C-j" nil)
+
+
+;;
+;;; Modules
 
 ;;;###package projectile
 (setq projectile-project-search-path '("~/Developer"))
@@ -75,16 +57,6 @@
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
-(map! :leader
-      "h d U" #'doom/upgrade)
-
-
-(map! :after evil-org
-      :map evil-org-mode-map
-      :i "C-l" nil
-      :i "C-h" nil
-      :i "C-k" nil
-      :i "C-j" nil)
 
 (load! "+org")
 (load! "+latex")
