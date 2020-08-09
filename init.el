@@ -76,7 +76,7 @@
        (kotlin +lsp)
        (latex +latexmk +cdlatex +lsp +fold)
        markdown
-       (org +dragndrop +hugo +jupyter +pomodoro +present +roam +noter)
+       (org +dragndrop +hugo +jupyter +pomodoro +present +roam +noter +pretty)
        plantuml
        (python +lsp)
        sh
