@@ -32,24 +32,12 @@
 ;; org latex
 (setq org-latex-compiler "xelatex"
       org-latex-image-default-width ".6\\linewidth")
-(setq! org-latex-default-packages-alist
-       '(("AUTO"            "inputenc"  t ("pdflatex"))
-         ("T1"              "fontenc"   t ("pdflatex"))
-         (""                "graphicx"  t)
-         (""                "grffile"   t)
-         (""                "longtable" nil)
-         (""                "wrapfig"   nil)
-         (""                "rotating"  nil)
-         ("normalem"        "ulem"      t)
-         (""                "amsmath"   t)
-         (""                "textcomp"  t)
-         (""                "amssymb"   t)
-         (""                "capt-of"   nil)
-         ("colorlinks=true" "hyperref"  nil)
-         (""                "booktabs"  nil)
-         (""                "enumitem"  nil)
-         (""                "fontspec"  nil)
-         (""                "ctex"      t ("xelatex"))
+(setq! org-latex-packages-alist
+       '(("" "ctex" t ("xelatex"))
+         ("" "booktabs" nil)
+         ("" "enumitem" nil)
+         ("" "fontspec" nil)
+         ("" "pgfplots" t)
          ("left=2.5cm, right=2.5cm, top=2cm, bottom=2cm" "geometry" nil)))
 
 ;; org preview
