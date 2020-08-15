@@ -18,8 +18,9 @@
 ;;; UI
 
 (if IS-WINDOWS
-    (setq doom-font (font-spec :family "Consolas" :size 20))
-  (setq doom-font (font-spec :family "monospace" 16)))
+    (setq doom-font (font-spec :family "Fira Code")
+          doom-unicode-font (font-spec :family "DengXian"))
+  (setq doom-font (font-spec :family "Fira Code" :size 16)))
 
 ;; maximized at startup
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
