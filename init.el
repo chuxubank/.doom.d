@@ -62,9 +62,11 @@
        gist
        (lookup +docsets +dictionary)
        lsp
-       (:if IS-MAC macos)
        magit
        pdf
+
+       :os
+       (:if IS-MAC macos)
 
        :lang
        (cc +lsp)
