@@ -15,6 +15,11 @@
   :custom
   (anki-editor-latex-style 'mathjax))
 
+(use-package! anki-vocabulary
+  :defer t
+  :bind (:map doom-leader-map
+         ("d" . #'anki-vocabulary)))
+
 ;;;###package org-roam
 (setq! org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
 
