@@ -39,6 +39,7 @@
       :i "C-k" nil
       :i "C-j" nil)
 
+(map! :i "C-SPC" nil)
 
 ;;
 ;;; Modules
