@@ -13,8 +13,7 @@
          :recursive t)))
 
 (after! org
-  (setq org-src-preserve-indentation nil
-        +org-capture-todo-file "inbox.org"
+  (setq +org-capture-todo-file "inbox.org"
         org-agenda-files (directory-files-recursively org-directory (rx ".org" eos)))
   (pushnew! org-modules 'org-habit)
   (pushnew! org-link-abbrev-alist
