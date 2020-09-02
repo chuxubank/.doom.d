@@ -27,7 +27,8 @@
   )
 
 ;;;###package org-roam
-(setq! org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
+(setq! org-roam-directory "~/OneDrive/Roam"
+       org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
 
 (use-package! bing-dict
   :after org
