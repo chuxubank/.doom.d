@@ -13,8 +13,7 @@
          :recursive t)))
 
 (after! org
-  (setq +org-capture-todo-file "inbox.org"
-        org-agenda-files (directory-files-recursively org-directory (rx ".org" eos)))
+  (setq +org-capture-todo-file "inbox.org")
   (pushnew! org-modules 'org-habit)
   (pushnew! org-link-abbrev-alist
             '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
