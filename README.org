@@ -1,7 +1,5 @@
 * Misaka's doom-emacs config
-** macOS
-** Windows
-*** Init file
+** Basic Usage
 #+begin_src sh
   cd ~
   git clone --depth 1 https://github.com/hlissner/doom-emacs .emacs.d
@@ -9,11 +7,13 @@
   ~/.emacs.d/bin/doom install
 #+end_src
 
-You can then add =~/.emacs.d/bin/doom= to your Windows Path environment.
+You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 
+** macOS
+** Windows (Msys2) :DEPRECATED:
 *** MSYS2 config
 Install [[https://www.msys2.org/][MSYS2]].
-- set ~MSYS2_PATH_TYPE=1~ in Windows environment.
+- set ~MSYS2_PATH_TYPE=inherit~ in Windows environment.
 - set ~MSYS2_ARG_CONV_EXCL=--path-separator=~ in Windows environment. (fix the ~fd~ path issue in msys2)
 
 I use mingw64 terminal as my default one, which has all path in environment and no more config needed (It defines the =HOME= and =SHELL= environment).
@@ -45,3 +45,28 @@ You can add a shortcut to =C:\msys64\mingw64\bin\runemacs.exe= and rename the sh
 
 *** UTF-8
 In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change system locale... -> [x] Beta: Use Unicode UTF-8 for worldwide language support~.
+** Windows (WSL1)
+*** Install tools
+#+begin_src sh
+scoop install archwsl vcxsrv chrome
+#+end_src
+
+*** Config zsh in wsl
+[[file:~/.zshenv][.zshenv]]
+#+begin_src sh
+# doom-emacs
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# display
+export DISPLAY=:0.0
+export LIBGL_ALWAYS_INDIRECT=1
+#+end_src
+
+*** Patch for fd and ripgrep
+[[file:~/.zshrc][.zshrc]]
+#+begin_src sh
+alias fd="fd -j1"
+alias rg="rg -j1"
+#+end_src
+
+[[file:0001-Fix-fd-and-ripgrep-on-wsl1.patch][Fix for fd and ripgrep on wsl1]]
