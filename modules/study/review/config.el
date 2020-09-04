@@ -27,7 +27,7 @@
   )
 
 ;;;###package org-roam
-(setq! org-roam-directory "~/Documents/Roam"
+(setq! org-roam-directory "~/roam"
        org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
 
 (use-package! bing-dict
