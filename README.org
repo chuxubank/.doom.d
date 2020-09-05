@@ -10,6 +10,13 @@
 You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 
 ** macOS
+*** File sync
+#+begin_src sh
+  ln -s ~/Library/Mobile\ Documents/iCloud~com~appsonthemove~beorg/Documents/org org
+  ln -s ~/Documents/Roam roam
+  ln -s ~/Library/Mobile\ Documents/3L68KQB4HG\~com\~readdle\~CommonDocuments/Documents PDFs
+#+end_src
+
 ** Windows (Msys2)
 *** MSYS2 config
 Install [[https://www.msys2.org/][MSYS2]].
