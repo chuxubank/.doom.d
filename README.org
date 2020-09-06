@@ -17,6 +17,15 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
   ln -s ~/Library/Mobile\ Documents/3L68KQB4HG\~com\~readdle\~CommonDocuments/Documents PDFs
 #+end_src
 
+*** Rime
+#+begin_src sh
+  librime_version=1.5.3
+  wget https://github.com/rime/librime/releases/download/$librime_version/rime-$librime_version-osx.zip
+  unzip rime-$librime_version-osx.zip -d ~/.rime
+  rm -rf rime-$librime_version-osx.zip
+#+end_src
+
+
 ** Windows (Msys2)
 *** MSYS2 config
 Install [[https://www.msys2.org/][MSYS2]].

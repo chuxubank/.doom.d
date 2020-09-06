@@ -3,7 +3,7 @@
 (use-package! rime
   :custom
   (default-input-method "rime")
-  (rime-user-data-dir (expand-file-name "rime" doom-local-dir))
+  (rime-user-data-dir "~/.rime")
   (rime-show-candidate 'posframe)
   (rime-posframe-style 'vertical)
   (rime-cursor "˰")
@@ -21,7 +21,7 @@
                              rime-predicate-current-uppercase-letter-p
                              rime-predicate-punctuation-after-space-cc-p)))
 (when IS-MAC
-  (setq! rime-librime-root (expand-file-name "librime/dist" doom-local-dir)))
+  (setq! rime-librime-root (expand-file-name "dist" rime-user-data-dir)))
 
 (use-package! pangu-spacing
   :hook (text-mode . pangu-spacing-mode)
