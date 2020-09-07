@@ -66,6 +66,6 @@
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
-
 (load! "+org")
 (load! "+latex")
+(load! "+wsl")

@@ -66,8 +66,16 @@ In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change sys
 ** Windows (WSL1)
 *** Install
 #+begin_src sh
-scoop install archwsl vcxsrv
+scoop install archwsl vcxsrv chrome
 #+end_src
+*** Detect
+#+begin_src elisp
+(string-match "-[Mm]icrosoft" operating-system-release)
+;; WSL: WSL1 has "-Microsoft", WSL2 has "-microsoft-standard"
+(string-match-p "Microsoft" (shell-command-to-string "uname -a"))
+#+end_src
+
+Ref: https://emacs.stackexchange.com/a/55295
 
 *** Config
 [[file:~/.zshenv][.zshenv]]
