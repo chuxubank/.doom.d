@@ -22,7 +22,8 @@
         doom-unicode-font (font-spec :family "DengXian")))
 
 (when IS-LINUX
-  (setq doom-font (font-spec :family "Fira Code")))
+  (setq doom-font (font-spec :family "Fira Code")
+        doom-unicode-font (font-spec :family "Noto Sans CJK SC")))
 
 (when IS-MAC
   (setq doom-font (font-spec :family "Fira Code" :size 16)))
