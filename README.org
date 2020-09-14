@@ -12,6 +12,7 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 ** macOS
 *** File sync
 #+begin_src sh
+  cd ~
   ln -s ~/Library/Mobile\ Documents/iCloud~com~appsonthemove~beorg/Documents/org org
   ln -s ~/Documents/Roam roam
   ln -s ~/Library/Mobile\ Documents/3L68KQB4HG\~com\~readdle\~CommonDocuments/Documents PDFs
@@ -19,10 +20,11 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 
 *** Rime
 #+begin_src sh
+  cd ~/Downloads
   librime_version=1.5.3
-  wget https://github.com/rime/librime/releases/download/$librime_version/rime-$librime_version-osx.zip
-  unzip rime-$librime_version-osx.zip -d ~/.rime
-  rm -rf rime-$librime_version-osx.zip
+  wget https://github.com/rime/librime/releases/download/${librime_version}/rime-${librime_version}-osx.zip
+  unzip rime-${librime_version}-osx.zip "dist/*" -d ~/Library/Rime
+  rm -rf rime-${librime_version}-osx.zip
 #+end_src
 
 
