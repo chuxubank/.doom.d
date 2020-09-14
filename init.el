@@ -98,5 +98,4 @@
        :study
        review
        leetcode
-       (:if IS-LINUX eaf)
        )
