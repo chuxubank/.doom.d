@@ -6,5 +6,5 @@
 
 (when IS-WSL
   (defun wsl-browse-url-chrome (url &optional _new-window)
-    (shell-command (concat "chrome.exe " url)))
+    (shell-command (format "%s '%s'" "chrome.exe" url)))
   (setq browse-url-browser-function 'wsl-browse-url-chrome))
