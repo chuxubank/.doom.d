@@ -5,12 +5,8 @@
       org-image-actual-width '(500)
       org-log-done 'time
       org-export-with-toc nil
-      org-publish-project-alist
-      '(("UNGEE"
-         :base-directory "~/Developer/UNGEE"
-         :publishing-directory "~/Documents/UNGEE"
-         :publishing-function org-latex-publish-to-pdf
-         :recursive t)))
+      org-agenda-skip-deadline-if-done t
+      org-agenda-skip-scheduled-if-done t)
 
 (after! org
   (setq +org-capture-todo-file "inbox.org")
