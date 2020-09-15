@@ -65,7 +65,7 @@ You can add a shortcut to =C:\msys64\mingw64\bin\runemacs.exe= and rename the sh
 
 *** UTF-8
 In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change system locale... -> [x] Beta: Use Unicode UTF-8 for worldwide language support~.
-** Windows (WSL1)
+** Windows (WSL)
 *** Install
 #+begin_src sh
 scoop install archwsl vcxsrv chrome
@@ -79,7 +79,7 @@ scoop install archwsl vcxsrv chrome
 
 Ref: https://emacs.stackexchange.com/a/55295
 
-*** Config
+*** Config (WSL1)
 [[file:~/.zshenv][.zshenv]]
 #+begin_src sh
 # doom-emacs
@@ -89,12 +89,3 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 export DISPLAY=:0.0
 export LIBGL_ALWAYS_INDIRECT=1
 #+end_src
-
-*** Patch for fd and ripgrep
-[[file:~/.zshrc][.zshrc]]
-#+begin_src sh
-alias fd="fd -j1"
-alias rg="rg -j1"
-#+end_src
-
-[[file:0001-Fix-fd-and-ripgrep-on-wsl1.patch][Fix for fd and ripgrep on wsl1]]
