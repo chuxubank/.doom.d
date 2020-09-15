@@ -18,11 +18,6 @@
 ;; org noter
 (setq org-noter-default-notes-file-names nil)
 
-;; org title
-(custom-set-faces
- `(org-level-1 ((t (:inherit outline-1 :height 1.2))))
- `(org-level-2 ((t (:inherit outline-2 :height 1.1)))))
-
 ;; org latex
 (setq org-latex-compiler "xelatex"
       org-latex-image-default-width ".6\\linewidth")
