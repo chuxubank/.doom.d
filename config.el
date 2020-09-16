@@ -23,7 +23,8 @@
 
 (when IS-LINUX
   (setq doom-font (font-spec :family "Fira Code")
-        doom-unicode-font (font-spec :family "Noto Sans CJK SC")))
+        doom-unicode-font (font-spec :family "Noto Sans CJK SC"))
+  (pushnew! doom-unicode-extra-fonts "Noto Color Emoji"))
 
 (when IS-MAC
   (setq doom-font (font-spec :family "Fira Code" :size 16)))
