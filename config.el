@@ -3,6 +3,7 @@
 (setq user-full-name "Misaka"
       user-mail-address "chuxubank@qq.com"
 
+      doom-scratch-initial-major-mode 'lisp-interaction-mode
       doom-theme 'doom-dracula
       display-line-numbers-type 'relative)
 
