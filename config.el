@@ -69,6 +69,9 @@
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
+;;;###package pdf-tools
+(setq pdf-view-use-unicode-ligther nil)
+
 (load! "+org")
 (load! "+latex")
 (load! "+wsl")
