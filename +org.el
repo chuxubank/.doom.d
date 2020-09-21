@@ -18,6 +18,9 @@
 ;; org noter
 (setq org-noter-default-notes-file-names nil)
 
+;; org mobile
+(setq org-mobile-directory "~/mobileorg")
+
 ;; org latex
 (setq org-latex-compiler "xelatex"
       org-latex-image-default-width ".6\\linewidth")
