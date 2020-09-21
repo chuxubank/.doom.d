@@ -20,10 +20,10 @@
                              rime-predicate-punctuation-after-ascii-p
                              rime-predicate-current-uppercase-letter-p
                              rime-predicate-punctuation-after-space-cc-p)))
+
 (when IS-MAC
-  (setq
-   rime-user-data-dir "~/Library/Rime/"
-   rime-librime-root (expand-file-name "dist" rime-user-data-dir)))
+  (setq rime-user-data-dir "~/Library/Rime/"
+        rime-librime-root (expand-file-name "dist" rime-user-data-dir)))
 
 (when IS-LINUX
   (setq rime-user-data-dir "~/.config/ibus/rime/"))
