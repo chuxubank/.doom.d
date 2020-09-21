@@ -28,7 +28,9 @@
   (pushnew! doom-unicode-extra-fonts "Noto Color Emoji"))
 
 (when IS-MAC
-  (setq doom-font (font-spec :family "Fira Code" :size 16)))
+  (setq doom-font (font-spec :family "Fira Code" :size 16)
+        doom-unicode-font (font-spec :family "PingFang SC"))
+  (pushnew! doom-unicode-extra-fonts "Apple Color Emoji"))
 
 ;; maximized at startup
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
