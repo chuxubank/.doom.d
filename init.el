@@ -73,6 +73,7 @@
        (:if IS-MAC clojure)
        data
        emacs-lisp
+       (json +lsp)
        (java +lsp)
        (javascript +lsp)
        (kotlin +lsp)
