@@ -89,6 +89,7 @@
 
        :app
        (rss +org)
+       leetcode
 
        :config
        (default +bindings +smartparens)
@@ -98,5 +99,4 @@
 
        :study
        review
-       leetcode
        )
