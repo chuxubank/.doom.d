@@ -90,6 +90,7 @@
        :app
        (rss +org)
        leetcode
+       telega
 
        :config
        (default +bindings +smartparens)
