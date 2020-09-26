@@ -2,10 +2,7 @@
 
 (use-package! telega
   :commands (telega)
+  :bind (:map doom-leader-map
+         ("a t" . #'telega))
   :config
-  (add-hook 'telega-load-hook 'telega-mode-line-mode)
-  (set-evil-initial-state!
-    '(telega-root-mode
-      telega-chat-mode
-      telega-image-mode)
-    'emacs))
+  (add-hook 'telega-load-hook 'telega-mode-line-mode))

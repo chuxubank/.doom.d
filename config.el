@@ -37,21 +37,6 @@
 
 
 ;;
-;;; Keybinds
-
-(map! :leader
-      "h d U" #'doom/upgrade)
-
-(map! :after evil-org
-      :map evil-org-mode-map
-      :i "C-l" nil
-      :i "C-h" nil
-      :i "C-k" nil
-      :i "C-j" nil)
-
-(map! :i "C-SPC" nil)
-
-;;
 ;;; Modules
 
 ;;;###package projectile
@@ -60,13 +45,6 @@
 ;;;###package magit
 (setq magit-repository-directories '(("~/Developer" . 3))
       magit-clone-url-format "https://%h/%n.git")
-
-;;;###package evil
-(setq! evil-disable-insert-state-bindings t)
-(set-evil-initial-state!
-  '(osx-dictionary-mode
-    pdf-annot-list-mode)
-  'emacs)
 
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
@@ -77,3 +55,4 @@
 (load! "+org")
 (load! "+latex")
 (load! "+wsl")
+(load! "+map")

@@ -36,7 +36,3 @@
 
 (use-package! valign
   :hook (org-mode . valign-mode))
-
-(map! :map rime-mode-map
-      "C-`" 'rime-send-keybinding
-      "s-i" 'rime-force-enable)
