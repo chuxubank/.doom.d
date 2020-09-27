@@ -8,10 +8,6 @@
   'emacs)
 
 (map! :i "C-SPC" nil
-      (:after ivy :map ivy-minibuffer-map
-       "C-SPC" nil)
-      (:after counsel :map counsel-ag-map
-       "C-SPC" nil)
       (:after evil-org :map evil-org-mode-map
        :i "C-l" nil
        :i "C-h" nil
