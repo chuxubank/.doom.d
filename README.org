@@ -18,6 +18,11 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
   ln -s ~/Library/Mobile\ Documents/3L68KQB4HG\~com\~readdle\~CommonDocuments/Documents PDFs
 #+end_src
 
+*** Install tools
+#+begin_src sh
+  brew install fd ripgrep sqlite
+#+end_src
+
 *** Rime
 #+begin_src sh
   cd ~/Downloads
@@ -27,12 +32,24 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
   rm -rf rime-${librime_version}-osx.zip
 #+end_src
 
+** iOS/iPadOS
+*** [[https://ish.app][ish]]
+#+name: /etc/apk/repositories
+#+begin_src
+  https://mirror.tuna.tsinghua.edu.cn/alpine/edge/main
+  https://mirror.tuna.tsinghua.edu.cn/alpine/edge/community
+#+end_src
 
-** Windows (Msys2)
+*** Install tools
+#+begin_src sh
+  apk install fd ripgrep sqlite
+#+end_src
+
+** Windows (MSYS2)
 *** MSYS2 config
 Install [[https://www.msys2.org/][MSYS2]].
 - set ~MSYS2_PATH_TYPE=inherit~ in Windows environment.
-- set ~MSYS2_ARG_CONV_EXCL=--path-separator=~ in Windows environment. (fix the ~fd~ path issue in msys2)
+- set ~MSYS2_ARG_CONV_EXCL=--path-separator~ in Windows environment. (fix the ~fd~ and ~rg~ path issue in msys2)
 
 I use mingw64 terminal as my default one, which has all path in environment and no more config needed (It defines the =HOME= and =SHELL= environment).
 
@@ -46,7 +63,7 @@ I use mingw64 terminal as my default one, which has all path in environment and 
   scoop install aria2 # speed up the download
   scoop bucket add extras
   scoop install powertoys # swipe Caps Lock and left Ctrl and many other features...
-  scoop install fd ripgrep editorconfig plantuml openjdk latex sudo ln which
+  scoop install fd ripgrep editorconfig plantuml openjdk latex sudo ln which sqlite
   scoop bucket add nerd-fonts
   scoop install sarasagothic-ttc
 #+end_src
@@ -55,21 +72,26 @@ I use mingw64 terminal as my default one, which has all path in environment and 
 You can add a shortcut to =C:\msys64\mingw64\bin\runemacs.exe= and rename the shortcut to Emacs, then changing the =Start in:= property to the path you want to start.
 
 *** File sync
-1. Install iCloud in Microsoft Store
-2. Link the directory
-   #+begin_src sh
-     ln -s ~/iCloudDrive/iCloud\~com\~appsonthemove\~beorg/org org
-     ln -s ~/iCloudDrive/Documents/Roam roam
-     ln -s ~/iCloudDrive/3L68KQB4HG\~com\~readdle\~CommonDocuments/ PDFs
-   #+end_src
+#+begin_src sh
+  ln -s ~/iCloudDrive/iCloud\~com\~appsonthemove\~beorg/org org
+  ln -s ~/iCloudDrive/Documents/Roam roam
+  ln -s ~/iCloudDrive/3L68KQB4HG\~com\~readdle\~CommonDocuments/ PDFs
+#+end_src
 
 *** UTF-8
 In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change system locale... -> [x] Beta: Use Unicode UTF-8 for worldwide language support~.
+
 ** Windows (WSL)
 *** Install
 #+begin_src sh
-scoop install archwsl vcxsrv chrome
+  scoop install archwsl vcxsrv chrome
 #+end_src
+
+*** Install tools
+#+begin_src sh
+  sudo pacman -S fd ripgrep sqlite
+#+end_src
+
 *** Detect
 #+begin_src elisp
 (string-match "-[Mm]icrosoft" operating-system-release)
@@ -80,7 +102,7 @@ scoop install archwsl vcxsrv chrome
 Ref: https://emacs.stackexchange.com/a/55295
 
 *** Config (WSL1)
-[[file:~/.zshenv][.zshenv]]
+#+name: .zshenv
 #+begin_src sh
 # doom-emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"
