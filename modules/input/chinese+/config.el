@@ -33,6 +33,3 @@
   :config
   ;; Always insert `real' space in org-mode.
   (setq-hook! 'org-mode-hook pangu-spacing-real-insert-separtor t))
-
-(use-package! valign
-  :hook (org-mode . valign-mode))
