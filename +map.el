@@ -2,10 +2,11 @@
 
 ;;;###package evil
 (setq! evil-disable-insert-state-bindings t)
-(set-evil-initial-state!
-  '(osx-dictionary-mode
-    pdf-annot-list-mode)
+
+;;;###package evil-collection
+(set-evil-initial-state! '(pdf-annot-list-mode)
   'emacs)
+(evil-collection-init '(osx-dictionary))
 
 (map! :i "C-SPC" nil
       (:after evil-org :map evil-org-mode-map
