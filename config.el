@@ -32,9 +32,6 @@
         doom-unicode-font (font-spec :family "PingFang SC"))
   (pushnew! doom-unicode-extra-fonts "Apple Color Emoji"))
 
-;; maximized at startup
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
-
 
 ;;
 ;;; Modules
