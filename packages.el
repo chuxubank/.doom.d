@@ -22,7 +22,6 @@
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
-(package! nyan-mode :pin "06e67ab2c490756d3eeed4a68aba7c33e508a5d5")
 
 (package! lsp-latex :pin "a9a26a21bf16b9444021563d844719ace0c5c3b6")
 ;; To install a package directly from a particular repo, you'll need to specify

@@ -33,6 +33,7 @@
        window-select
        workspaces
        zen
+       ;; beautify
 
        :editor
        (evil +everywhere)
