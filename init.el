@@ -101,4 +101,6 @@
 
        :study
        review
+       (dict +anki)
+       ;; (pdf+ +noter)
        )
