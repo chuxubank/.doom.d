@@ -42,8 +42,9 @@
 (setq pdf-view-use-unicode-ligther nil)
 
 ;;;###package org-roam
-(setq! org-roam-directory "~/roam"
-       org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir))
+(after! org-roam
+  (setq org-roam-directory "~/roam"
+        org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir)))
 
 (load! "+org")
 (load! "+latex")
