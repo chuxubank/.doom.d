@@ -110,4 +110,5 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 # display
 export DISPLAY=:0.0
 export LIBGL_ALWAYS_INDIRECT=1
+export BROWSER=chrome.exe
 #+end_src
