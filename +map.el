@@ -9,13 +9,15 @@
 (evil-collection-init '(osx-dictionary))
 
 (map! :i "C-SPC" nil
+      :i "C-@" nil
       (:after evil-org :map evil-org-mode-map
        :i "C-l" nil
        :i "C-h" nil
        :i "C-k" nil
        :i "C-j" nil))
 
-(map! (:leader
+(map! :i "C-M-i" #'+company/complete
+      (:leader
        (:prefix-map ("a" . "app")
         (:when (featurep! :app eaf)
          :desc "EAF"             "e" #'eaf)
