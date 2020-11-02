@@ -5,7 +5,8 @@
 
       doom-scratch-initial-major-mode 'lisp-interaction-mode
       doom-theme 'doom-dracula
-      display-line-numbers-type 'relative)
+      display-line-numbers-type 'relative
+      display-time-day-and-date t)
 
 ;;
 ;;; UI
@@ -23,7 +24,8 @@
   (setq doom-font (font-spec :family "Fira Code" :size 16)
         doom-unicode-font (font-spec :family "PingFang SC"))
   (pushnew! doom-unicode-extra-fonts "Apple Color Emoji")
-  (mac-auto-operator-composition-mode 1))
+  (mac-auto-operator-composition-mode 1)
+  (display-time-mode 1))
 
 
 ;;
