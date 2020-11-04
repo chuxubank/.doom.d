@@ -89,8 +89,10 @@ In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change sys
 
 *** Install tools
 #+begin_src sh
-  sudo pacman -S fd ripgrep sqlite
+  sudo pacman -S fd ripgrep sqlite xdg-utils
 #+end_src
+
+Ref: https://wiki.archlinux.org/index.php/default_applications
 
 *** Detect
 #+begin_src elisp
