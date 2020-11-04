@@ -82,14 +82,21 @@ You can add a shortcut to =C:\msys64\mingw64\bin\runemacs.exe= and rename the sh
 In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change system locale... -> [x] Beta: Use Unicode UTF-8 for worldwide language support~.
 
 ** Windows (WSL)
-*** Install
+*** Install on Windows
 #+begin_src sh
   scoop install archwsl vcxsrv chrome
 #+end_src
-
-*** Install tools
+*** WSL system setting
+**** Chinese
 #+begin_src sh
-  sudo pacman -S fd ripgrep sqlite xdg-utils
+sudo pacman -S librime noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+#+end_src
+
+Ref: https://wiki.archlinux.org/index.php/Locale
+
+**** Install tools
+#+begin_src sh
+  sudo pacman -S fd ripgrep sqlite xdg-utils base-devel
 #+end_src
 
 Ref: https://wiki.archlinux.org/index.php/default_applications
