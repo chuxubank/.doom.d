@@ -50,6 +50,9 @@
 (after! org-roam
   (setq org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir)))
 
+;;;###package org-noter
+(setq org-noter-default-notes-file-names nil)
+
 (load! "+org")
 (load! "+latex")
 (load! "+map")

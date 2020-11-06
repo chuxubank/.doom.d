@@ -7,7 +7,10 @@
       org-log-done 'time
       org-export-with-toc nil
       org-agenda-skip-deadline-if-done t
-      org-agenda-skip-scheduled-if-done t)
+      org-agenda-skip-scheduled-if-done t
+
+      org-mobile-directory "~/mobileorg"
+      org-taskjuggler-reports-directory (concat doom-cache-dir "reports"))
 
 (after! org
   (setq +org-capture-todo-file "inbox.org")
@@ -16,13 +19,7 @@
             '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
             '("wiki"    . "https://en.wikipedia.org/wiki/%s")))
 
-;; org noter
-(setq org-noter-default-notes-file-names nil)
-
-;; org mobile
-(setq org-mobile-directory "~/mobileorg")
-
-;; org latex
+;; latex
 (setq org-latex-compiler "xelatex"
       org-latex-image-default-width ".6\\linewidth")
 (setq! org-latex-packages-alist
@@ -33,7 +30,7 @@
          ("" "pgfplots" t)
          ("left=2.5cm, right=2.5cm, top=2cm, bottom=2cm" "geometry" nil)))
 
-;; org preview
+;; preview
 (setq org-preview-latex-default-process 'dvisvgm
       org-preview-latex-process-alist
       '((dvisvgm :programs ("xelatex" "dvisvgm")
