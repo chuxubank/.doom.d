@@ -56,3 +56,4 @@
 (load! "+org")
 (load! "+latex")
 (load! "+map")
+(load! "+wsl")
