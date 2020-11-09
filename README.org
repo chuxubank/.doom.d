@@ -112,7 +112,6 @@ Ref: https://wiki.archlinux.org/index.php/default_applications
 Ref: https://emacs.stackexchange.com/a/55295
 
 *** Config (WSL1)
-#+name: .zshenv
 #+begin_src sh
 # doom-emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"
@@ -122,3 +121,5 @@ export DISPLAY=:0.0
 export LIBGL_ALWAYS_INDIRECT=1
 export BROWSER=chrome.exe
 #+end_src
+
+Ref: https://docs.microsoft.com/en-us/windows/wsl/interop#wslenv-flags

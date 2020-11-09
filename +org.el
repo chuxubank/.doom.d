@@ -10,7 +10,7 @@
       org-agenda-skip-scheduled-if-done t
 
       org-mobile-directory "~/mobileorg"
-      org-taskjuggler-reports-directory (concat doom-cache-dir "reports"))
+      org-taskjuggler-reports-directory ".reports")
 
 (after! org
   (setq +org-capture-todo-file "inbox.org")
