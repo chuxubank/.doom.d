@@ -96,10 +96,11 @@ Ref: https://wiki.archlinux.org/index.php/Locale
 
 **** Install tools
 #+begin_src sh
-  sudo pacman -S fd ripgrep sqlite xdg-utils base-devel texlive-most texlive-lang
+  sudo pacman -S fd ripgrep sqlite xdg-utils mailcap base-devel texlive-most texlive-lang
 #+end_src
 
 Ref: https://wiki.archlinux.org/index.php/default_applications
+     https://github.com/4U6U57/wsl-open/blob/master/DESIGN.md
 
 *** Detect
 #+begin_src elisp
