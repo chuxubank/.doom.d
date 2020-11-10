@@ -45,6 +45,13 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
   apk install fd ripgrep sqlite
 #+end_src
 
+** Windows
+*** Native
+**** PowerShell Config
+#+begin_src sh
+Set-PSReadLineOption -EditMode Emacs
+#+end_src
+
 ** Windows (MSYS2)
 *** MSYS2 config
 Install [[https://www.msys2.org/][MSYS2]].

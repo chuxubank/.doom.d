@@ -1,7 +1,7 @@
 ;;; +wsl.el -*- lexical-binding: t; -*-
 
-(defconst IS-WSL1 (string-match "-Microsoft" operating-system-release))
-(defconst IS-WSL2 (string-match "-microsoft" operating-system-release))
+(defconst IS-WSL1 (and IS-LINUX (string-match "-Microsoft" operating-system-release)))
+(defconst IS-WSL2 (and IS-LINUX (string-match "-microsoft" operating-system-release)))
 (defconst IS-WSL (or IS-WSL1 IS-WSL2))
 
 ;; https://vxlabs.com/2020/03/07/patch-emacs-org-open-file-using-advice/

@@ -64,7 +64,7 @@
        (lookup +docsets +dictionary)
        lsp
        magit
-       pdf
+       (:if (not IS-WINDOWS) pdf)
 
        :os
        (:if IS-MAC macos)
