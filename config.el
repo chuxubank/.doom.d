@@ -24,9 +24,13 @@
   (setq doom-font (font-spec :family "Fira Code" :size 16)
         doom-unicode-font (font-spec :family "PingFang SC"))
   (pushnew! doom-unicode-extra-fonts "Apple Color Emoji")
-  (mac-auto-operator-composition-mode 1)
-  (display-time-mode 1))
+  (mac-auto-operator-composition-mode 1))
 
+(defadvice! +display-time-on-fullscreen-a (&rest _)
+  :after #'toggle-frame-fullscreen
+  (if (equal 'fullboth (frame-parameter nil 'fullscreen))
+      (display-time-mode 1)
+    (display-time-mode -1)))
 
 ;;
 ;;; Modules
