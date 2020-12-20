@@ -93,17 +93,18 @@ In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change sys
 #+begin_src sh
   scoop install archwsl vcxsrv chrome
 #+end_src
+
 *** WSL system setting
-**** Chinese
+**** Display
 #+begin_src sh
-sudo pacman -S librime noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-fira-code
 #+end_src
 
 Ref: https://wiki.archlinux.org/index.php/Locale
 
 **** Install tools
 #+begin_src sh
-  sudo pacman -S fd ripgrep sqlite xdg-utils mailcap base-devel texlive-most texlive-lang
+  sudo pacman -S git github-cli fd ripgrep sqlite xdg-utils mailcap base-devel texlive-core texlive-langchinese librime 
 #+end_src
 
 Ref: https://wiki.archlinux.org/index.php/default_applications
