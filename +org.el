@@ -10,7 +10,12 @@
       org-agenda-skip-scheduled-if-done t
 
       org-mobile-directory "~/mobileorg"
-      org-taskjuggler-reports-directory ".reports")
+      org-taskjuggler-reports-directory ".reports"
+      org-publish-project-alist '(("Study"
+                                   :base-directory "~/Developer/Study"
+                                   :publishing-directory "~/PDFs/Study"
+                                   :publishing-function org-latex-publish-to-pdf
+                                   :recursive t)))
 
 (after! org
   (setq +org-capture-todo-file "inbox.org")
