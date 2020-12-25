@@ -58,6 +58,7 @@
        (:if IS-MAC spell)
 
        :tools
+       biblio
        editorconfig
        (eval +overlay)
        gist
