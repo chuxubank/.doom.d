@@ -64,7 +64,7 @@
        (lookup +docsets +dictionary)
        lsp
        magit
-       (:if (not IS-WINDOWS) pdf)
+       pdf
 
        :os
        (:if IS-MAC macos)
@@ -102,5 +102,5 @@
        :study
        review
        (dict +anki)
-       ;; (pdf+ +noter)
+       (pdf+ +scroll)
        )
