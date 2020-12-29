@@ -103,5 +103,4 @@
        :study
        review
        (dict +anki)
-       (pdf+ +scroll)
        )
