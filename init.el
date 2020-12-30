@@ -55,7 +55,7 @@
 
        :checkers
        syntax
-       (:if IS-MAC spell)
+       (spell +aspell)
 
        :tools
        biblio
