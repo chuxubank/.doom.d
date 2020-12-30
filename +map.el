@@ -1,23 +1,18 @@
 ;;; +map.el -*- lexical-binding: t; -*-
 
-;;;###package evil
-(setq! evil-disable-insert-state-bindings t)
+(when (featurep! :editor evil)
+  (setq! evil-disable-insert-state-bindings t)
+  (set-evil-initial-state! '(pdf-annot-list-mode) 'emacs)
+  (evil-collection-init '(osx-dictionary))
+  (map! :i "C-SPC" nil
+        :i "C-@" nil
+        (:after evil-org :map evil-org-mode-map
+         :i "C-l" nil
+         :i "C-h" nil
+         :i "C-k" nil
+         :i "C-j" nil)))
 
-;;;###package evil-collection
-(set-evil-initial-state! '(pdf-annot-list-mode)
-  'emacs)
-(evil-collection-init '(osx-dictionary))
-
-(map! :i "C-SPC" nil
-      :i "C-@" nil
-      (:after evil-org :map evil-org-mode-map
-       :i "C-l" nil
-       :i "C-h" nil
-       :i "C-k" nil
-       :i "C-j" nil))
-
-(map! :i "C-M-i" #'+company/complete
-      (:leader
+(map! (:leader
        (:prefix-map ("a" . "app")
         (:when (featurep! :app eaf)
          :desc "EAF"             "e" #'eaf)
