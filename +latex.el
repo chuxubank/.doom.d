@@ -22,5 +22,4 @@
 (after! cdlatex
   (setq cdlatex-use-dollar-to-ensure-math t)
   (map! :map cdlatex-mode-map
-        "TAB" #'cdlatex-tab))
-
+        :i "TAB" #'cdlatex-tab))
