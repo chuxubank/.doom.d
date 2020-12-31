@@ -17,6 +17,7 @@
   (anki-editor-latex-style 'mathjax))
 
 (use-package! org-roam-server
+  :when (featurep! +roam)
   :hook (org-roam-mode . org-roam-server-mode)
   :config
   (defun org-roam-server-open()

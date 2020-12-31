@@ -104,7 +104,7 @@ Ref: https://wiki.archlinux.org/index.php/Locale
 
 **** Install tools
 #+begin_src sh
-  sudo pacman -S git github-cli fd ripgrep sqlite xdg-utils mailcap base-devel texlive-core texlive-langchinese librime poppler-data
+  sudo pacman -S git github-cli fd ripgrep sqlite xdg-utils mailcap base-devel texlive-core texlive-langchinese librime poppler-data aspell aspell-en
 #+end_src
 
 Ref: https://wiki.archlinux.org/index.php/default_applications

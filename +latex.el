@@ -24,8 +24,3 @@
   (map! :map cdlatex-mode-map
         "TAB" #'cdlatex-tab))
 
-;;;###package smartparens
-(after! smartparens
-  (sp-with-modes '(org-mode)
-    (sp-local-pair "$" "$")
-    (sp-local-pair "\\[" "\\]")))

@@ -35,6 +35,12 @@
          ("" "pgfplots" t)
          ("left=2.5cm, right=2.5cm, top=2cm, bottom=2cm" "geometry" nil)))
 
+;;;###package smartparens
+(after! smartparens
+  (sp-with-modes '(org-mode)
+    (sp-local-pair "$" "$")
+    (sp-local-pair "\\[" "\\]")))
+
 ;; preview
 (setq org-preview-latex-default-process 'dvisvgm
       org-preview-latex-process-alist

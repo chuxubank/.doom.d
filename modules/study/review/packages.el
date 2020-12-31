@@ -5,7 +5,8 @@
 
 (package! org-fc :recipe (:host github :repo "l3kn/org-fc" :files (:defaults "awk" "demo.org")))
 
-(package! org-roam-server)
+(when (featurep! +roam)
+  (package! org-roam-server))
 
 (when (featurep! +anki)
   (package! anki-editor :pin "546774a453ef4617b1bcb0d1626e415c67cc88df"))
