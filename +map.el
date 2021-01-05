@@ -27,7 +27,12 @@
         (:when (featurep! :study dict +anki)
          :desc "Anki"           "a" #'anki-vocabulary)
         (:when (and (featurep! :tools lookup +dictionary) IS-MAC)
-         :desc "OSX"            "o" #'osx-dictionary-search-input)))
+         :desc "OSX"            "o" #'osx-dictionary-search-input))
+
+       (:prefix-map ("n" . "notes")
+        (:when (featurep! :study review +roam)
+         (:prefix ("r" . "roam")
+          :desc "Open server"   "o" #'org-roam-server-open))))
 
       (:map help-map
        "dU" #'doom/upgrade)
@@ -35,9 +40,4 @@
       (:when (featurep! :input chinese+)
        (:map rime-mode-map
         "C-`" #'rime-send-keybinding
-        "C-i" #'rime-force-enable))
-
-      (:prefix-map ("n" . "notes")
-       (:when (featurep! :study review +roam)
-        (:prefix ("r" . "roam")
-         :desc "Open server"    "o" #'org-roam-server-open))))
+        "C-i" #'rime-force-enable)))
