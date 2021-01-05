@@ -55,7 +55,7 @@
 
        :checkers
        syntax
-       (spell +aspell)
+       (spell +flyspell)
 
        :tools
        biblio
