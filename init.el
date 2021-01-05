@@ -101,6 +101,6 @@
        chinese+
 
        :study
-       review
+       (review +roam)
        (dict +anki)
        )

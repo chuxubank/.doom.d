@@ -18,6 +18,8 @@
 
 (use-package! org-roam-server
   :when (featurep! +roam)
+  :init
+  (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
   :hook (org-roam-mode . org-roam-server-mode)
   :config
   (defun org-roam-server-open()
