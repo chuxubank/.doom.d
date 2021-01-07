@@ -54,7 +54,7 @@
        eshell
 
        :checkers
-       syntax
+       (syntax +childframe)
        (spell +flyspell)
 
        :tools
