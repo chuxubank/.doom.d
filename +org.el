@@ -24,7 +24,15 @@
             '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
             '("wiki"    . "https://en.wikipedia.org/wiki/%s")))
 
-;; latex
+;;;###package org-roam
+(setq org-roam-directory "~/org-roam"
+      org-roam-link-auto-replace nil)
+
+;;;###package org-noter
+(setq org-noter-default-notes-file-names nil)
+
+;;
+;;; latex
 (setq org-latex-compiler "xelatex"
       org-latex-image-default-width ".6\\linewidth")
 (setq! org-latex-packages-alist
@@ -41,7 +49,8 @@
     (sp-local-pair "$" "$")
     (sp-local-pair "\\[" "\\]")))
 
-;; preview
+;;
+;;; preview
 (setq org-preview-latex-default-process 'dvisvgm
       org-preview-latex-process-alist
       '((dvisvgm :programs ("xelatex" "dvisvgm")

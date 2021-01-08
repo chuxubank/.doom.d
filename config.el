@@ -48,15 +48,6 @@
 ;;;###package pdf-tools
 (setq pdf-view-use-unicode-ligther nil)
 
-;;;###package org-roam
-(setq org-roam-directory "~/roam"
-      org-roam-link-auto-replace nil)
-(after! org-roam
-  (setq org-roam-db-location (expand-file-name "org-roam.db" doom-cache-dir)))
-
-;;;###package org-noter
-(setq org-noter-default-notes-file-names nil)
-
 (load! "+org")
 (load! "+latex")
 (load! "+map")
