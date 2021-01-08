@@ -45,8 +45,8 @@
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
-;;;###package pdf-tools
-(setq pdf-view-use-unicode-ligther nil)
+;;;###package elfedd
+(add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
 (load! "+org")
 (load! "+latex")
