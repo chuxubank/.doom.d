@@ -19,7 +19,9 @@
         (:when (featurep! :app telega)
          :desc "Telega"         "t" #'telega)
         (:when (featurep! :app leetcode)
-         :desc "LeetCode"       "l" #'leetcode))
+         :desc "LeetCode"       "l" #'leetcode)
+        (:when (featurep! :app rss)
+         :desc "Elfeed RSS"     "r" #'elfeed))
 
        (:prefix-map ("d" . "dictionary")
         (:when (featurep! :study dict)
