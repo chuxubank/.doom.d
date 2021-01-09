@@ -98,7 +98,7 @@
        (default +bindings +smartparens)
 
        :input
-       chinese+
+       (chinese+ +valign)
 
        :study
        (review +roam)
