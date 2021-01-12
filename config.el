@@ -45,7 +45,7 @@
 ;;;###package format-all
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
-;;;###package elfedd
+;;;###package elfeed
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
 (load! "+org")
