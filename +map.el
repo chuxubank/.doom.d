@@ -6,6 +6,16 @@
   (evil-collection-init '(osx-dictionary))
   (map! :i "C-SPC" nil
         :i "C-@" nil
+        (:prefix "C-x"
+         :i "C-l" nil
+         :i "C-k" nil
+         :i "C-f" nil
+         :i "C-]" nil
+         :i "s"   nil
+         :i "C-s" nil
+         :i "C-o" nil
+         :i "C-n" nil
+         :i "C-p" nil)
         (:after evil-org :map evil-org-mode-map
          :i "C-l" nil
          :i "C-h" nil
