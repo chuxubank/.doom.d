@@ -65,6 +65,7 @@
        (lookup +docsets +dictionary)
        lsp
        magit
+       pass
        pdf
 
        :os
