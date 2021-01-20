@@ -44,8 +44,11 @@
        (:prefix-map ("n" . "notes")
         (:when (featurep! :study review +roam)
          (:prefix ("r" . "roam")
-          :desc "Open server"   "o" #'org-roam-server-open))))
+          (:after org-roam-server
+           :desc "Open server"   "o" #'org-roam-server-open)))))
 
+      ;;
+      ;;; Without leader
       (:map help-map
        "dU" #'doom/upgrade)
 
