@@ -13,7 +13,8 @@
 
 (when IS-WINDOWS
   (setq doom-font (font-spec :family "Fira Code")
-        doom-unicode-font (font-spec :family "DengXian")))
+        doom-unicode-font (font-spec :family "DengXian"))
+  (pushnew! doom-unicode-extra-fonts "Segoe UI Emoji"))
 
 (when IS-LINUX
   (setq doom-font (font-spec :family "Fira Code")
