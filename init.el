@@ -55,8 +55,7 @@
 
        :checkers
        (syntax +childframe)
-       (:if (not IS-WINDOWS)
-        (spell +flyspell))
+       (spell +flyspell)
 
        :tools
        biblio
