@@ -14,7 +14,6 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 #+begin_src sh
   cd ~
   ln -s ~/Library/Mobile\ Documents/iCloud~com~appsonthemove~beorg/Documents/org org
-  ln -s ~/Documents/Roam roam
   ln -s ~/Library/Mobile\ Documents/3L68KQB4HG\~com\~readdle\~CommonDocuments/Documents PDFs
 #+end_src
 
@@ -51,9 +50,19 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 #+begin_src sh
 Set-PSReadLineOption -EditMode Emacs
 #+end_src
+**** Git
+#+begin_src gitconfig
+[pull]
+        rebase = true
+[credential]
+        helper = manager-core
+[credential "https://github.com"]
+        helper = !gh auth git-credential
+[core]
+        autocrlf = true
+#+end_src
 
-** Windows (MSYS2)
-*** MSYS2 config
+*** MSYS2
 Install [[https://www.msys2.org/][MSYS2]].
 - set ~MSYS2_PATH_TYPE=inherit~ in Windows environment.
 - set ~MSYS2_ARG_CONV_EXCL=--path-separator~ in Windows environment. (fix the ~fd~ and ~rg~ path issue in msys2)
@@ -62,47 +71,47 @@ I use mingw64 terminal as my default one, which has all path in environment and 
 
 #+begin_src bash
   pacman -S pactoys base-devel # pactoys use shortcut to install mingw64 packages, base-devel is needed by pdf-tools and emacs-rime
-  pacboy -S emacs:x toolchain:x librime:x librime-data:x
+  pacboy -S emacs:x toolchain:x librime:x librime-data:x aspell-en:x python-pylint:x
+  ln -s /mingw64/bin/mingw32-make.exe /mingw64/bin/make.exe # fix make
 #+end_src
 
-*** Install tools
+**** Install tools
 #+begin_src sh
   scoop install aria2 # speed up the download
   scoop bucket add extras
-  scoop install powertoys # swipe Caps Lock and left Ctrl and many other features...
-  scoop install fd ripgrep editorconfig plantuml openjdk latex sudo ln which sqlite
+  scoop install sharpkeys # swipe Caps Lock and left Ctrl
+  scoop install fd ripgrep editorconfig plantuml openjdk latex
   scoop bucket add nerd-fonts
   scoop install sarasagothic-ttc
 #+end_src
 
-*** GUI shortcut
+**** GUI shortcut
 You can add a shortcut to =C:\msys64\mingw64\bin\runemacs.exe= and rename the shortcut to Emacs, then changing the =Start in:= property to the path you want to start.
 
-*** File sync
+**** File sync
 #+begin_src sh
   ln -s ~/iCloudDrive/iCloud\~com\~appsonthemove\~beorg/org org
-  ln -s ~/iCloudDrive/Documents/Roam roam
   ln -s ~/iCloudDrive/3L68KQB4HG\~com\~readdle\~CommonDocuments/ PDFs
 #+end_src
 
-*** UTF-8
+**** UTF-8
 In the ~Control Panel\Clock and Region -> Region -> Administrative -> Change system locale... -> [x] Beta: Use Unicode UTF-8 for worldwide language support~.
 
-** Windows (WSL)
-*** Install on Windows
+*** WSL
+**** Install tools
 #+begin_src sh
   scoop install archwsl vcxsrv chrome
 #+end_src
 
-*** WSL system setting
-**** Display
+**** WSL system setting
+***** Display
 #+begin_src sh
 sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-fira-code
 #+end_src
 
 Ref: https://wiki.archlinux.org/index.php/Locale
 
-**** Install tools
+***** Install tools
 #+begin_src sh
   sudo pacman -S git github-cli fd ripgrep sqlite xdg-utils mailcap base-devel texlive-core texlive-langchinese librime poppler-data aspell aspell-en texlab graphviz
 #+end_src
@@ -110,7 +119,7 @@ Ref: https://wiki.archlinux.org/index.php/Locale
 Ref: https://wiki.archlinux.org/index.php/default_applications
      https://github.com/4U6U57/wsl-open/blob/master/DESIGN.md
 
-*** Detect
+**** Detect
 #+begin_src elisp
 (string-match "-[Mm]icrosoft" operating-system-release)
 ;; WSL: WSL1 has "-Microsoft", WSL2 has "-microsoft-standard"
@@ -119,7 +128,7 @@ Ref: https://wiki.archlinux.org/index.php/default_applications
 
 Ref: https://emacs.stackexchange.com/a/55295
 
-*** Config (WSL1)
+**** Config (WSL1)
 #+begin_src sh
 # doom-emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"
