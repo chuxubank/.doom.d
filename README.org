@@ -72,7 +72,6 @@ I use mingw64 terminal as my default one, which has all path in environment and 
 #+begin_src bash
   pacman -S pactoys base-devel # pactoys use shortcut to install mingw64 packages, base-devel is needed by pdf-tools and emacs-rime
   pacboy -S emacs:x toolchain:x librime:x librime-data:x aspell-en:x python-pylint:x clang:x clang-tools-extra:x libc++:x
-  ln -s /mingw64/bin/mingw32-make.exe /mingw64/bin/make.exe # fix make
 #+end_src
 
 **** Install tools
