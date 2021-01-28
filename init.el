@@ -79,7 +79,8 @@
        :app
        (rss +org)
        leetcode
-       ;; telega
+       (:unless IS-WINDOWS
+        telega)
 
        :config
        (default +bindings +smartparens)
