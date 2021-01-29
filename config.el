@@ -48,12 +48,6 @@
 
 ;;;###package elfeed
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
-(defadvice elfeed (after configure-elfeed-feeds activate)
-  "Make elfeed-org autotags rules works with elfeed-protocol."
-  (setq elfeed-protocol-tags elfeed-feeds
-        elfeed-feeds '(("fever+https://chuxubank@chuxubank-miniflux.herokuapp.com"
-                        :api-url "https://chuxubank-miniflux.herokuapp.com/fever/"
-                        :password (password-store-get "miniflux/fever/chuxubank")))))
 
 (load! "+org")
 (load! "+latex")
