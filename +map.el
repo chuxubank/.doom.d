@@ -27,7 +27,7 @@
         (:when (featurep! :app eaf)
          :desc "EAF"            "e" #'eaf)
         (:when (featurep! :app telega)
-         :desc "Telega"         "t" #'telega)
+         :desc "Telega"         "t" telega-prefix-map)
         (:when (featurep! :app leetcode)
          :desc "LeetCode"       "l" #'leetcode)
         (:when (featurep! :app rss)
