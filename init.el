@@ -80,7 +80,7 @@
        (rss +org)
        leetcode
        (:unless IS-WINDOWS
-        telega)
+        (telega +url-shorten +alert +mnz))
 
        :config
        (default +bindings +smartparens)
