@@ -25,11 +25,21 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 *** Rime
 #+begin_src sh
   cd ~/Downloads
-  librime_version=1.5.3
-  wget https://github.com/rime/librime/releases/download/${librime_version}/rime-${librime_version}-osx.zip
-  unzip rime-${librime_version}-osx.zip "dist/*" -d ~/Library/Rime
+  librime_version=1.7.0
+  wget -N https://github.com/rime/librime/releases/download/${librime_version}/rime-${librime_version}-osx.zip
+  unzip -fo rime-${librime_version}-osx.zip "dist/*" -d ~/rime
   rm -rf rime-${librime_version}-osx.zip
 #+end_src
+
+#+RESULTS:
+| Archive:   | rime-1.7.0-osx.zip                                        |
+| inflating: | /Users/misaka/rime/dist/bin/rime_dict_manager             |
+| inflating: | /Users/misaka/rime/dist/bin/rime_deployer                 |
+| inflating: | /Users/misaka/rime/dist/include/rime_levers_api.h         |
+| inflating: | /Users/misaka/rime/dist/include/rime_api.h                |
+| inflating: | /Users/misaka/rime/dist/lib/librime.dylib                 |
+| inflating: | /Users/misaka/rime/dist/lib/librime.1.dylib               |
+| inflating: | /Users/misaka/rime/dist/share/cmake/rime/RimeConfig.cmake |
 
 ** iOS/iPadOS
 *** [[https://ish.app][ish]]

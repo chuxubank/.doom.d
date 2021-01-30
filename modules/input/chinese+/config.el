@@ -1,6 +1,11 @@
 ;;; input/chinese+/config.el -*- lexical-binding: t; -*-
 
 (use-package! rime
+  :commands #'toggle-input-method
+  :init
+  (setq rime-user-data-dir "~/rime")
+  (when IS-MAC
+    (setq rime-librime-root (expand-file-name "dist" rime-user-data-dir)))
   :custom
   (default-input-method "rime")
   (rime-user-data-dir (expand-file-name "rime" doom-local-dir))
@@ -19,20 +24,19 @@
                              rime-predicate-punctuation-line-begin-p
                              rime-predicate-punctuation-after-ascii-p
                              rime-predicate-current-uppercase-letter-p
-                             rime-predicate-punctuation-after-space-cc-p)))
+                             rime-predicate-punctuation-after-space-cc-p))
+  :config
+  (map! :map rime-mode-map
+        "C-`" #'rime-send-keybinding
+        "M-i" #'rime-force-enable))
 
-(when IS-MAC
-  (setq rime-user-data-dir "~/Library/Rime/"
-        rime-librime-root (expand-file-name "dist" rime-user-data-dir)))
-
-(when IS-LINUX
-  (setq rime-user-data-dir "~/.config/ibus/rime/"))
 
 (use-package! pangu-spacing
   :hook (text-mode . pangu-spacing-mode)
   :config
   ;; Always insert `real' space in org-mode.
   (setq-hook! 'org-mode-hook pangu-spacing-real-insert-separtor t))
+
 
 (use-package! valign
   :when (featurep! +valign)

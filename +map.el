@@ -47,12 +47,5 @@
           (:after org-roam-server
            :desc "Open server"   "o" #'org-roam-server-open)))))
 
-      ;;
-      ;;; Without leader
       (:map help-map
-       "dU" #'doom/upgrade)
-
-      (:when (featurep! :input chinese+)
-       (:map rime-mode-map
-        "C-`" #'rime-send-keybinding
-        "C-i" #'rime-force-enable)))
+       "dU" #'doom/upgrade))
