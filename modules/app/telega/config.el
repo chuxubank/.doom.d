@@ -1,41 +1,34 @@
 ;;; app/telega/config.el -*- lexical-binding: t; -*-
 
-(use-package! telega
-  :defer t
-  :config
+(after! telega
   (when (featurep! :editor evil)
     (set-evil-initial-state!
       '(telega-root-mode
-        telega-chat-mode
-        telega-edit-file-mode
-        telega-image-mode
-        telega-webpage-mode)
+        telega-chat-mode)
       'emacs))
-  (when IS-MAC
-    (setq telega-symbol-folder "📁")))
+  (setq telega-symbol-folder "📁"))
 
-(use-package! telega-url-shorten
-  :when (featurep! +url-shorten)
-  :after telega
-  :config
-  (global-telega-url-shorten-mode))
+(when (featurep! +modeline)
+  (setq telega-mode-line-string-format
+        '("   "
+          (:eval (telega-mode-line-online-status))
+          (:eval (when telega-use-tracking-for
+                   (telega-mode-line-tracking)))
+          (:eval (telega-mode-line-unread-unmuted))
+          (:eval (telega-mode-line-mentions 'messages))))
+  (add-hook 'telega-load-hook 'telega-mode-line-mode))
 
-(use-package! telega-alert
-  :when (featurep! +alert)
-  :after telega
-  :config
-  (alert-add-rule :category "telega"
-                  :mode 'telega-chat-mode))
+(when (featurep! +url-shorten)
+  (add-hook 'telega-load-hook 'global-telega-url-shorten-mode))
 
-(use-package! telega-mnz
-  :when (featurep! +mnz)
-  :commands #'telega-mnz-attach-region-as-code
-  :after telega
-  :init
-  (define-key telega-prefix-map (kbd "'") #'telega-mnz-attach-region-as-code)
-  :config
-  (global-telega-mnz-mode))
+(when (featurep! +alert)
+  (add-hook 'telega-load-hook 'telega-alert-mode))
+
+(when (featurep! +mnz)
+  (add-hook 'telega-load-hook 'global-telega-mnz-mode))
 
 (use-package! language-detection
   :when (featurep! +mnz)
-  :after telega-mnz)
+  ;; NOTE the `language-detection-string' function is already autoloaded,
+  ;; so we can safely defer it.
+  :defer t)
