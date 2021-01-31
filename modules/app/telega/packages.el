@@ -1,11 +1,7 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; app/telega/packages.el
 
-(package! telega
-  :recipe
-  (:host github
-   :repo "zevlg/telega.el"
-   :files (:defaults "etc" "server" "Makefile")))
+(package! telega)
 
 (when (featurep! +url-shorten)
   (package! telega-url-shorten
