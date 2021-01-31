@@ -47,6 +47,8 @@
 (appendq! +format-on-save-enabled-modes '(nxml-mode html-mode))
 
 ;;;###package elfeed
+(after! elfeed
+  (setq elfeed-search-filter "@2-week-ago -nsfw"))
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
 (load! "+org")
