@@ -2,7 +2,6 @@
 
 (use-package! meow
   :init
-  (meow-global-mode 1)
   (defun meow-setup ()
     (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
     (meow-leader-define-key

@@ -1,14 +1,33 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; app/telega/packages.el
 
-(package! telega)
+(package! telega
+  :recipe
+  (:host github
+   :repo "zevlg/telega.el"
+   :files (:defaults "etc" "server" "Makefile")))
 
 (when (featurep! +url-shorten)
-  (package! telega-url-shorten :type 'local :recipe (:local-repo "telega.el/contrib" :files ("telega-url-shorten.el"))))
+  (package! telega-url-shorten
+    :recipe
+    (:host github
+     :repo "zevlg/telega.el"
+     :branch "master"
+     :files ("contrib/telega-url-shorten.el"))))
 
 (when (featurep! +alert)
-  (package! telega-alert :type 'local :recipe (:local-repo "telega.el/contrib" :files ("telega-alert.el"))))
+  (package! telega-alert
+    :recipe
+    (:host github
+     :repo "zevlg/telega.el"
+     :branch "master"
+     :files ("contrib/telega-alert.el"))))
 
 (when (featurep! +mnz)
   (package! language-detection)
-  (package! telega-mnz :type 'local :recipe (:local-repo "telega.el/contrib" :files ("telega-mnz.el"))))
+  (package! telega-mnz
+    :recipe
+    (:host github
+     :repo "zevlg/telega.el"
+     :branch "master"
+     :files ("contrib/telega-mnz.el"))))
