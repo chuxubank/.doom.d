@@ -1,11 +1,10 @@
 ;;; app/telega/config.el -*- lexical-binding: t; -*-
 
 (after! telega
-  (when (featurep! :editor evil)
-    (set-evil-initial-state!
-      '(telega-root-mode
-        telega-chat-mode)
-      'emacs))
+  (when (featurep! :editor evil +everywhere)
+    (map! :map telega-msg-button-map
+          "k" nil
+          "l" nil))
   (setq telega-symbol-folder "📁"))
 
 (when (featurep! +modeline)
