@@ -1,11 +1,15 @@
 ;;; app/telega/config.el -*- lexical-binding: t; -*-
 
-(after! telega
+(use-package! telega
+  :commands telega
+  :config
+  (setq telega-symbol-folder "📁")
   (when (featurep! :editor evil +everywhere)
     (map! :map telega-msg-button-map
           "k" nil
-          "l" nil))
-  (setq telega-symbol-folder "📁"))
+          "l" nil
+          "C-j" #'telega-button-forward
+          "C-k" #'telega-button-backward)))
 
 (when (featurep! +modeline)
   (setq telega-mode-line-string-format

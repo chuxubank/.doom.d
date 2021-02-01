@@ -23,7 +23,7 @@
          :i "C-j" nil)))
 
 (map! (:leader
-       (:prefix-map ("a" . "app")
+       (:prefix ("a" . "app")
         (:when (featurep! :app eaf)
          :desc "EAF"            "e" #'eaf)
         (:when (featurep! :app telega)
@@ -33,7 +33,7 @@
         (:when (featurep! :app rss)
          :desc "Elfeed RSS"     "r" #'elfeed))
 
-       (:prefix-map ("d" . "dictionary")
+       (:prefix ("d" . "dictionary")
         (:when (featurep! :study dict)
          :desc "Bing"           "b" #'bing-dict-brief)
         (:when (featurep! :study dict +anki)
@@ -41,7 +41,7 @@
         (:when (and (featurep! :tools lookup +dictionary) IS-MAC)
          :desc "OSX"            "o" #'osx-dictionary-search-input))
 
-       (:prefix-map ("n" . "notes")
+       (:prefix ("n" . "notes")
         (:when (featurep! :study review +roam)
          (:prefix ("r" . "roam")
           (:after org-roam-server
