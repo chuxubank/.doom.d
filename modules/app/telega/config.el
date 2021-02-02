@@ -5,16 +5,24 @@
   :config
   (setq telega-symbol-folder "📁")
   (when (featurep! :editor evil +everywhere)
-    (map! :map telega-msg-button-map
-          "k" nil
-          "l" nil
-          "C-j" #'telega-button-forward
-          "C-k" #'telega-button-backward)))
+    (map! (:map telega-msg-button-map
+           "k" nil
+           "l" nil
+           :n "yl" #'telega-msg-copy-link
+           :n "C-j" #'telega-button-forward
+           :n "C-k" #'telega-button-backward
+           :n "q" #'telega)
+          (:map telega-chat-mode-map
+           :n "C-j" #'telega-button-forward
+           :n "C-k" #'telega-button-backward
+           :n "q" #'telega)
+          (:map telega-root-mode-map
+           :n "q" #'bury-buffer))))
 
 (when (featurep! +modeline)
-  (setq telega-mode-line-string-format
-        '("   "
-          (:eval (telega-mode-line-online-status))
+  (setq telega-symbol-online-status (propertize "✈" 'face 'success)
+        telega-mode-line-string-format
+        '((:eval (telega-mode-line-online-status))
           (:eval (when telega-use-tracking-for
                    (telega-mode-line-tracking)))
           (:eval (telega-mode-line-unread-unmuted))
