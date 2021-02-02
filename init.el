@@ -79,8 +79,7 @@
        :app
        (rss +org)
        leetcode
-       (:unless IS-WINDOWS
-        (telega +modeline +url-shorten +alert +mnz))
+       ;; (telega +modeline +url-shorten +alert +mnz)
 
        :config
        (default +bindings +smartparens)
