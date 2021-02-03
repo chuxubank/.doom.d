@@ -17,7 +17,34 @@
            :n "C-k" #'telega-button-backward
            :n "q" #'telega)
           (:map telega-root-mode-map
-           :n "q" #'bury-buffer))))
+           :n "o" telega-sort-map
+           :n "f" telega-filter-map
+           :n "s" #'telega-view-search
+           :n "u" #'telega-filter-undo
+           :n "C-r" #'telega-filter-redo
+           :n "C-j" #'telega-button-forward
+           :n "C-k" #'telega-button-backward
+           :n "q" #'bury-buffer)))
+  (map! :map telega-root-mode-map
+        :localleader
+        :prefix("f" . "folder")
+        "n" #'telega-folder-create
+        "d" #'telega-folder-delete
+        "o" #'telega-folders-reorder
+        "r" #'telega-folder-rename
+        "a" #'telega-chat-add-to-folder
+        "-" #'telega-chat-remove-from-folder
+        :prefix("h" . "help")
+        "w" #'telega-describe-connected-websites
+        "s" #'telega-describe-active-sessions
+        "n" #'telega-describe-network
+        "y" #'telega-describe-notifications
+        "N" #'telega-describe-notifications
+        "p" #'telega-describe-privacy-settings
+        :prefix("c" . "chat")
+        "j" #'telega-chat-join-by-link
+        "n" #'telega-chat-create))
+
 
 (when (featurep! +modeline)
   (setq telega-symbol-online-status (propertize "✈" 'face 'success)
