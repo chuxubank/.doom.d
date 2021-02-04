@@ -3,7 +3,8 @@
 (use-package! telega
   :commands telega
   :config
-  (setq telega-symbol-folder "📁")
+  (setq telega-symbol-folder "📁"
+        telega-symbol-reply "↫")
   (when (featurep! :editor evil +everywhere)
     (map! (:map telega-msg-button-map
            "k" nil
@@ -24,27 +25,7 @@
            :n "C-r" #'telega-filter-redo
            :n "C-j" #'telega-button-forward
            :n "C-k" #'telega-button-backward
-           :n "q" #'bury-buffer)))
-  (map! :map telega-root-mode-map
-        :localleader
-        :prefix("f" . "folder")
-        "n" #'telega-folder-create
-        "d" #'telega-folder-delete
-        "o" #'telega-folders-reorder
-        "r" #'telega-folder-rename
-        "a" #'telega-chat-add-to-folder
-        "-" #'telega-chat-remove-from-folder
-        :prefix("h" . "help")
-        "w" #'telega-describe-connected-websites
-        "s" #'telega-describe-active-sessions
-        "n" #'telega-describe-network
-        "y" #'telega-describe-notifications
-        "N" #'telega-describe-notifications
-        "p" #'telega-describe-privacy-settings
-        :prefix("c" . "chat")
-        "j" #'telega-chat-join-by-link
-        "n" #'telega-chat-create))
-
+           :n "q" #'bury-buffer))))
 
 (when (featurep! +modeline)
   (setq telega-symbol-online-status (propertize "✈" 'face 'success)
