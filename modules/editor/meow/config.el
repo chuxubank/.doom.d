@@ -2,6 +2,7 @@
 
 (use-package! meow
   :init
+  (meow-global-mode 1)
   (defun meow-setup ()
     (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
     (meow-leader-define-key
@@ -51,8 +52,8 @@
      '("j" . meow-join)
      '("J" . delete-indentation)
      '("k" . meow-kill)
-     '("l" . meow-till)
-     '("L" . meow-till-expand)
+     '("l" . meow-right)
+     '("L" . meow-right-expand)
      '("m" . meow-mark-word)
      '("M" . meow-mark-symbol)
      '("n" . meow-next)
@@ -66,8 +67,8 @@
      '("R" . meow-replace-save)
      '("s" . meow-search)
      '("S" . meow-pop-search)
-     '("t" . meow-right)
-     '("T" . meow-right-expand)
+     '("t" . meow-till)
+     '("T" . meow-till-expand)
      '("u" . undo)
      '("v" . meow-visit)
      '("w" . meow-next-word)
@@ -82,4 +83,7 @@
   :config
   (meow-setup)
   (meow-setup-line-number)
-  (meow-setup-indicator))
+  (meow-setup-indicator)
+  ;; NOTE consistency with `doom/escape'
+  (map! :map meow-insert-state-keymap
+        "C-g" #'meow-insert-exit))

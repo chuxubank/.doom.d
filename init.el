@@ -22,7 +22,8 @@
        ;; beautify
 
        :editor
-       (evil +everywhere)
+       meow
+       ;; (evil +everywhere)
        file-templates
        fold
        (format +onsave)
@@ -79,7 +80,7 @@
        :app
        (rss +org)
        leetcode
-       ;; (telega +modeline +url-shorten +alert +mnz)
+       (telega +modeline +url-shorten +alert +mnz)
 
        :config
        (default +bindings +smartparens)
