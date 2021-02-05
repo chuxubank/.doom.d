@@ -5,19 +5,25 @@
 
 (when (featurep! +url-shorten)
   (package! telega-url-shorten
-    :recipe (:type built-in
-             :local-repo "telega.el/contrib"
-             :files ("telega-url-shorten.el"))))
+    :recipe
+    (:host github
+     :repo "zevlg/telega.el"
+     :branch "master"
+     :files ("contrib/telega-url-shorten.el"))))
 
 (when (featurep! +alert)
   (package! telega-alert
-    :recipe (:type built-in
-             :local-repo "telega.el/contrib"
-             :files ("telega-alert.el"))))
+    :recipe
+    (:host github
+     :repo "zevlg/telega.el"
+     :branch "master"
+     :files ("contrib/telega-alert.el"))))
 
 (when (featurep! +mnz)
   (package! language-detection)
   (package! telega-mnz
-    :recipe (:type built-in
-             :local-repo "telega.el/contrib"
-             :files ("telega-alert.el"))))
+    :recipe
+    (:host github
+     :repo "zevlg/telega.el"
+     :branch "master"
+     :files ("contrib/telega-mnz.el"))))
