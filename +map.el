@@ -44,10 +44,9 @@
          :desc "OSX"            "o" #'osx-dictionary-search-input))
 
        (:prefix ("n" . "notes")
-        (:when (featurep! :study review +roam-server)
-         (:prefix ("r" . "roam")
-          (:after org-roam-server
-           :desc "Open server"   "o" #'org-roam-server-open)))))
+        (:prefix ("r" . "roam")
+         (:when (featurep! :study review +roam-server)
+          :desc "Open server"   "o" #'org-roam-server-open))))
 
       (:map help-map
        "dU" #'doom/upgrade))

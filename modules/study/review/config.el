@@ -21,8 +21,8 @@
 
 (use-package! org-roam-server
   :when (featurep! +roam-server)
-  :after org-roam
-  :config
+  :commands #'org-roam-server-open
+  :init
   (defun org-roam-server-open()
     "Open org-roam server in browser."
     (interactive)
