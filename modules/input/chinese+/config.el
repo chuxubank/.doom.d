@@ -8,13 +8,13 @@
     (setq rime-librime-root (expand-file-name "dist" rime-user-data-dir)))
   :custom
   (default-input-method "rime")
-  (rime-user-data-dir (expand-file-name "rime" doom-local-dir))
-  (rime-show-candidate 'posframe)
-  (rime-posframe-style 'vertical)
-  (rime-cursor "˰")
   (rime-inline-predicates '(rime-predicate-space-after-cc-p
                             rime-predicate-current-uppercase-letter-p))
   :config
+  (when (featurep! +posframe)
+    (setq rime-show-candidate 'posframe
+          rime-cursor "˰"
+          rime-posframe-style 'vertical))
   (when (featurep! :editor meow)
     (setq rime-disable-predicates '(meow-normal-mode-p
                                     meow-motion-mode-p
