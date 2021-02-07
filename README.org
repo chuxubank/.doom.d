@@ -146,6 +146,9 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 export DISPLAY=:0.0
 export LIBGL_ALWAYS_INDIRECT=1
 export BROWSER=chrome.exe
+
+# audio
+export PULSE_SERVER=tcp:localhost
 #+end_src
 
 Ref: https://docs.microsoft.com/en-us/windows/wsl/interop#wslenv-flags

@@ -1,23 +1,26 @@
 ;;; study/review/config.el -*- lexical-binding: t; -*-
 
 (use-package! org-drill
-  :commands #'org-drill
-  :custom
-  (org-drill-scope 'agenda))
+  :commands #'org-drill)
 
 (use-package! org-fc
-  :after (org hydra)
+  :when (featurep! +fc)
+  :commands #'org-fc-dashboard
   :config
   (require 'org-fc-hydra))
 
+(use-package! org-media-note
+  :when (featurep! +media-note)
+  :hook (org-mode . org-media-note-mode))
+
 (use-package! anki-editor
   :when (featurep! +anki)
-  :after org
+  :commands #'anki-editor-insert-note
   :custom
   (anki-editor-latex-style 'mathjax))
 
 (use-package! org-roam-server
-  :when (featurep! +roam)
+  :when (featurep! +roam-server)
   :after org-roam
   :config
   (defun org-roam-server-open()

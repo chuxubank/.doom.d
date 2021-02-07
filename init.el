@@ -89,6 +89,6 @@
        (chinese+ +valign)
 
        :study
-       (review +roam)
+       (review +media-note +roam-server)
        (dict +anki)
        )
