@@ -32,8 +32,11 @@
          :desc "LeetCode"       "l" #'leetcode)
         (:when (featurep! :app rss)
          :desc "Elfeed RSS"     "r" #'elfeed)
-        (:when (featurep! :app ncm)
-         :desc "Netease Music"  "m" #'netease-cloud-music))
+        (:when (featurep! :app emms)
+         (:prefix ("m" . "Multimedia")
+          :desc "Emms"          "m" #'emms-smart-browse
+          (:when (featurep! :app emms +ncm)
+           :desc "Netease Cloud Music"    "n" #'netease-cloud-music))))
 
        (:prefix ("d" . "dictionary")
         (:when (featurep! :study dict)

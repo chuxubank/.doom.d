@@ -81,7 +81,7 @@
        (rss +org)
        leetcode
        (telega +modeline +url-shorten +alert +mnz)
-       ncm
+       (emms +ncm)
 
        :config
        (default +bindings +smartparens)
