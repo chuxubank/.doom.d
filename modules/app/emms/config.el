@@ -10,5 +10,5 @@
 (use-package! ncm
   :when (featurep! +ncm)
   :defer t
-  :config
-  (setq netease-cloud-music-cache-directory "~/NCM/"))
+  :custom
+  (netease-cloud-music-cache-directory "~/Documents/NCM/"))
