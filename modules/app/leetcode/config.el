@@ -1,4 +1,6 @@
 ;;; app/leetcode/config.el -*- lexical-binding: t; -*-
 
-;;;###package leetcode
-(setq leetcode-prefer-language "cpp")
+(use-package! leetcode
+  :commands #'leetcode
+  :config
+  (setq leetcode-prefer-language "cpp"))

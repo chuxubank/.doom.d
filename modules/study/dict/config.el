@@ -1,7 +1,7 @@
 ;;; study/dict/config.el -*- lexical-binding: t; -*-
 
 (use-package! bing-dict
-  :after org
+  :commands #'bing-dict-brief
   :config
   (setq bing-dict-vocabulary-save t
         bing-dict-show-thesaurus 'both
