@@ -86,4 +86,5 @@
   (meow-setup-indicator)
   ;; NOTE consistency with `doom/escape'
   (map! :map meow-insert-state-keymap
-        "C-g" #'meow-insert-exit))
+        "C-g" #'meow-insert-exit)
+  (global-set-key [remap keyboard-quit] #'keyboard-quit))
