@@ -13,7 +13,7 @@
 
 (when IS-WINDOWS
   (setq doom-font (font-spec :family "Fira Code"))
-  (add-to-list 'doom-unicode-extra-fonts "DengXian" t)
+  (add-to-list 'doom-unicode-extra-fonts "Sarasa Mono SC" t)
   (pushnew! doom-unicode-extra-fonts "Segoe UI Emoji"))
 
 (when IS-LINUX
