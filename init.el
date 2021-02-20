@@ -23,11 +23,8 @@
 
        :editor
        meow
-       ;; (evil +everywhere)
        file-templates
-       fold
        (format +onsave)
-       multiple-cursors
        snippets
        word-wrap
 
@@ -41,15 +38,14 @@
        eshell
 
        :checkers
-       (syntax +childframe)
+       syntax
        (spell +flyspell)
 
        :tools
-       biblio
        editorconfig
        (eval +overlay)
        gist
-       (lookup +docsets +dictionary)
+       (lookup +dictionary)
        lsp
        magit
        pass
@@ -76,6 +72,9 @@
        (:if IS-MAC (swift +lsp))
        web
        yaml
+
+       :email
+       (wanderlust +gmail)
 
        :app
        (rss +org)
