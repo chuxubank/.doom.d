@@ -48,7 +48,7 @@
 
 ;;;###package elfeed
 (after! elfeed
-  (setq elfeed-search-filter "@2-week-ago -nsfw"))
+  (setq elfeed-search-filter "@2-week-ago -nsfw -buy "))
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
 (load! "+org")

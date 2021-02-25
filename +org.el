@@ -9,7 +9,7 @@
       org-agenda-skip-deadline-if-done t
       org-agenda-skip-scheduled-if-done t
 
-      org-mobile-directory "~/mobileorg"
+      org-mobile-directory "~/org-mobile"
       org-taskjuggler-reports-directory ".reports"
       org-publish-project-alist '(("Study"
                                    :base-directory "~/Developer/Study"
