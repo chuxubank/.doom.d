@@ -13,9 +13,7 @@
        nav-flash
        ophints
        (popup +defaults)
-       treemacs
        vc-gutter
-       vi-tilde-fringe
        window-select
        workspaces
        zen
@@ -79,7 +77,8 @@
        :app
        (rss +org)
        leetcode
-       (telega +modeline +url-shorten +alert +mnz)
+       (:unless IS-WINDOWS
+        (telega +modeline +url-shorten +alert +mnz))
        (emms +ncm)
 
        :config
