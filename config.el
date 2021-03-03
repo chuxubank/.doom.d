@@ -1,7 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq user-full-name "Misaka"
-      user-mail-address "chuxubank@qq.com"
+      user-mail-address "chuxubank"
 
       doom-scratch-initial-major-mode 'lisp-interaction-mode
       doom-theme 'doom-dracula
