@@ -13,6 +13,6 @@
   :custom
   (anki-vocabulary-deck-name "Inbox")
   (anki-vocabulary-model-name "AutoCopy")
-  (anki-vocabulary-field-alist '(("Front" . "${expression:单词}")
-                                 ("Back" . "${sentence_bold:标粗的原文例句}"))))
-
+  (anki-vocabulary-field-alist '(("expression" . "${expression:单词}")
+                                 ("glossary" . "${glossary:释义}")
+                                 ("sentence" . "${sentence_bold:标粗的原文例句}"))))
