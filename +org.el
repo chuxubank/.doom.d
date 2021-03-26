@@ -1,6 +1,7 @@
 ;;; ~/.doom.d/+org.el -*- lexical-binding: t; -*-
 
 (setq org-superstar-headline-bullets-list '("#")
+      org-superstar-prettify-item-bullets nil
       org-pretty-entities t
       org-startup-with-inline-images t
       org-image-actual-width '(500)
