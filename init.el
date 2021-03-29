@@ -4,6 +4,10 @@
        company
        ivy
 
+       :input
+       rime
+       ;; sis
+
        :ui
        doom
        doom-dashboard
@@ -17,7 +21,7 @@
        window-select
        workspaces
        zen
-       ;; beautify
+       beautify
 
        :editor
        meow
@@ -83,9 +87,6 @@
 
        :config
        (default +bindings +smartparens)
-
-       :input
-       (chinese+ +valign)
 
        :study
        (review +media-note +roam-server)

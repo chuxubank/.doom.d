@@ -25,21 +25,61 @@ You can then add =~/.emacs.d/bin/doom= to your ~PATH~ environment.
 *** Rime
 #+begin_src sh
   cd ~/Downloads
-  librime_version=1.7.0
+  librime_version=1.7.3
   wget -N https://github.com/rime/librime/releases/download/${librime_version}/rime-${librime_version}-osx.zip
-  unzip -fo rime-${librime_version}-osx.zip "dist/*" -d ~/rime
+  unzip -o rime-${librime_version}-osx.zip -d ~/librime
   rm -rf rime-${librime_version}-osx.zip
 #+end_src
 
 #+RESULTS:
-| Archive:   | rime-1.7.0-osx.zip                                        |
-| inflating: | /Users/misaka/rime/dist/bin/rime_dict_manager             |
-| inflating: | /Users/misaka/rime/dist/bin/rime_deployer                 |
-| inflating: | /Users/misaka/rime/dist/include/rime_levers_api.h         |
-| inflating: | /Users/misaka/rime/dist/include/rime_api.h                |
-| inflating: | /Users/misaka/rime/dist/lib/librime.dylib                 |
-| inflating: | /Users/misaka/rime/dist/lib/librime.1.dylib               |
-| inflating: | /Users/misaka/rime/dist/share/cmake/rime/RimeConfig.cmake |
+| Archive:    | rime-1.7.3-osx.zip                                                       |
+| inflating:  | /Users/misaka/librime/dist/bin/rime_dict_manager                         |
+| inflating:  | /Users/misaka/librime/dist/bin/rime_deployer                             |
+| inflating:  | /Users/misaka/librime/dist/bin/rime_patch                                |
+| inflating:  | /Users/misaka/librime/dist/include/rime_levers_api.h                     |
+| inflating:  | /Users/misaka/librime/dist/include/rime_api.h                            |
+| inflating:  | /Users/misaka/librime/dist/lib/librime.dylib                             |
+| inflating:  | /Users/misaka/librime/dist/lib/librime.1.dylib                           |
+| inflating:  | /Users/misaka/librime/dist/lib/librime.1.7.3.dylib                       |
+| inflating:  | /Users/misaka/librime/dist/share/cmake/rime/RimeConfig.cmake             |
+| inflating:  | /Users/misaka/librime/thirdparty/bin/capnpc-capnp                        |
+| inflating:  | /Users/misaka/librime/thirdparty/bin/capnp                               |
+| inflating:  | /Users/misaka/librime/thirdparty/bin/opencc_phrase_extract               |
+| inflating:  | /Users/misaka/librime/thirdparty/bin/opencc_dict                         |
+| inflating:  | /Users/misaka/librime/thirdparty/bin/opencc                              |
+| inflating:  | /Users/misaka/librime/thirdparty/bin/capnpc-c++                          |
+| inflating:  | /Users/misaka/librime/thirdparty/bin/capnpc                              |
+| extracting: | /Users/misaka/librime/thirdparty/share/.placeholder                      |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/TWVariants.ocd2            |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/t2jp.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/TWPhrases.ocd2             |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/t2tw.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/TSCharacters.ocd2          |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/STCharacters.ocd2          |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/hk2t.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/JPShinjitaiCharacters.ocd2 |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/tw2s.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/HKVariantsRevPhrases.ocd2  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/hk2s.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/s2hk.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/tw2t.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/HKVariantsRev.ocd2         |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/TWVariantsRevPhrases.ocd2  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/t2s.json                   |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/STPhrases.ocd2             |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/HKVariants.ocd2            |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/TSPhrases.ocd2             |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/JPVariants.ocd2            |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/s2tw.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/s2twp.json                 |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/JPShinjitaiPhrases.ocd2    |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/JPVariantsRev.ocd2         |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/TWPhrasesRev.ocd2          |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/t2hk.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/TWVariantsRev.ocd2         |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/s2t.json                   |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/jp2t.json                  |
+| inflating:  | /Users/misaka/librime/thirdparty/share/opencc/tw2sp.json                 |
 
 ** iOS/iPadOS
 *** [[https://ish.app][ish]]
