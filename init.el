@@ -10,7 +10,7 @@
 
        :ui
        doom
-       doom-dashboard
+       ;; doom-dashboard
        doom-quit
        hl-todo
        modeline
