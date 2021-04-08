@@ -28,7 +28,8 @@
 
 ;;;###package org-roam
 (setq org-roam-directory "~/org-roam"
-      org-roam-link-auto-replace nil)
+      org-roam-link-auto-replace nil
+      +org-roam-open-buffer-on-find-file nil)
 
 ;;;###package org-noter
 (setq org-noter-default-notes-file-names nil)
