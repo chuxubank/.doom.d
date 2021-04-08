@@ -67,6 +67,7 @@
        (kotlin +lsp)
        (latex +latexmk +cdlatex +lsp +fold)
        markdown
+       mermaid
        (org +dragndrop +hugo +jupyter +pomodoro +present +roam +noter +pretty)
        plantuml
        (python +lsp)
