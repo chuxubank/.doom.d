@@ -5,7 +5,7 @@
        ivy
 
        :input
-       rime
+       (rime +posframe)
        ;; sis
 
        :ui
@@ -83,7 +83,7 @@
        (rss +org)
        leetcode
        (:unless IS-WINDOWS
-        (telega +modeline +url-shorten +alert +mnz))
+        (telega +url-shorten +alert +mnz))
        (emms +ncm)
 
        :config
