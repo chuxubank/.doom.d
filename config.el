@@ -33,6 +33,8 @@
       (display-time-mode 1)
     (display-time-mode -1)))
 
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
 ;;
 ;;; Modules
 
