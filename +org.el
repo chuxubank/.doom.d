@@ -23,7 +23,7 @@
   (setq +org-capture-todo-file "inbox.org")
   (pushnew! org-modules 'org-habit)
   (pushnew! org-link-abbrev-alist
-            '("wiki-zh" . "https://zh.wikipedia.org/wiki/%s")
+            '("wiki-zh" . "https://zh.wikipedia.org/wiki/%h")
             '("wiki"    . "https://en.wikipedia.org/wiki/%s")))
 
 ;;;###package org-roam
