@@ -12,6 +12,7 @@
   (default-input-method "rime")
   (rime-inline-predicates '(rime-predicate-space-after-cc-p
                             rime-predicate-current-uppercase-letter-p))
+  (rime-inline-ascii-holder ?x)
   :config
   (when (featurep! +posframe)
     (setq rime-show-candidate 'posframe
