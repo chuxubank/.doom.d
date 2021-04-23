@@ -12,7 +12,6 @@
   (default-input-method "rime")
   (rime-inline-predicates '(rime-predicate-space-after-cc-p
                             rime-predicate-current-uppercase-letter-p))
-  (rime-inline-ascii-holder ?x)
   :config
   (when (featurep! +posframe)
     (setq rime-show-candidate 'posframe
@@ -31,7 +30,9 @@
                                       rime-predicate-org-latex-mode-p
                                       rime-predicate-org-in-src-block-p
                                       rime-predicate-after-ascii-char-p
-                                      rime-predicate-tex-math-or-command-p))
+                                      rime-predicate-tex-math-or-command-p
+                                      rime-predicate-punctuation-line-begin-p
+                                      rime-predicate-punctuation-after-space-cc-p))
 
   (map! (:map rime-mode-map
          "C-`" #'rime-send-keybinding

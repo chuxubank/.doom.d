@@ -9,6 +9,4 @@
 
 (use-package! ncm
   :when (featurep! +ncm)
-  :defer t
-  :custom
-  (netease-cloud-music-cache-directory "~/Documents/NCM/"))
+  :defer t)
