@@ -58,6 +58,7 @@
 
        :lang
        (cc +lsp)
+       (csharp +lsp +dotnet)
        (:if IS-MAC clojure)
        data
        emacs-lisp
