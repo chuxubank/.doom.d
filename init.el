@@ -72,10 +72,10 @@
        (org +dragndrop +hugo +jupyter +pomodoro +present +roam +noter +pretty)
        plantuml
        (python +lsp)
-       sh
+       (sh +lsp)
        (:if IS-MAC (swift +lsp))
-       web
-       yaml
+       (web +lsp)
+       (yaml +lsp)
 
        :email
        (wanderlust +gmail)
