@@ -4,7 +4,9 @@
   :mode "\\.mmd\\'"
   :config
   (setq mermaid-tmp-dir (expand-file-name "mermaid" doom-cache-dir)
-        mermaid-output-format ".svg")
+        mermaid-output-format ".svg"
+        mermaid-config-file "~/.config/mmdc/config.json"
+        mermaid-flags (concat "-b transparent -t dark -c " mermaid-config-file))
   (defun org-babel-execute:mermaid (body params)
     "Execute command with BODY and PARAMS from src block."
     (let* ((out-file (or (cdr (assoc :file params))
