@@ -12,19 +12,15 @@
 ;;; UI
 
 (when IS-WINDOWS
-  (setq doom-font (font-spec :family "Fira Code"))
-  (add-to-list 'doom-unicode-extra-fonts "Sarasa Mono SC" t)
-  (pushnew! doom-unicode-extra-fonts "Segoe UI Emoji"))
+  (setq doom-font (font-spec :family "Fira Code")))
 
 (when IS-LINUX
   (setq doom-font (font-spec :family "Fira Code")
-        doom-unicode-font (font-spec :family "Noto Sans CJK SC"))
-  (pushnew! doom-unicode-extra-fonts "Noto Color Emoji"))
+        doom-unicode-font (font-spec :family "Noto Sans CJK SC")))
 
 (when IS-MAC
   (setq doom-font (font-spec :family "Fira Code" :size 16)
         doom-unicode-font (font-spec :family "PingFang SC"))
-  (pushnew! doom-unicode-extra-fonts "Apple Color Emoji")
   (mac-auto-operator-composition-mode 1))
 
 (defadvice! +display-time-on-fullscreen-a (&rest _)
