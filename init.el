@@ -50,6 +50,7 @@
        (lookup +dictionary)
        lsp
        magit
+       make
        pass
        pdf
 
@@ -66,7 +67,7 @@
        (java +lsp)
        (javascript +lsp)
        (kotlin +lsp)
-       (latex +latexmk +cdlatex +lsp +fold)
+       (latex +latexmk +cdlatex +lsp)
        markdown
        mermaid
        (org +dragndrop +hugo +jupyter +pomodoro +present +roam +noter +pretty)
