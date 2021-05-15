@@ -48,7 +48,7 @@
        (eval +overlay)
        gist
        (lookup +dictionary)
-       lsp
+       (lsp +peek)
        magit
        make
        pass
