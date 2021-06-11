@@ -3,7 +3,8 @@
 (setq org-superstar-headline-bullets-list '("#")
       ;; make sure you have installed the ttf version unifont
       org-superstar-prettify-item-bullets t
-      org-pretty-entities t
+      ;; confilt with cdlatex-tab
+      org-pretty-entities nil
       org-startup-with-inline-images t
       org-image-actual-width '(500)
       org-log-done 'time
@@ -23,8 +24,7 @@
   (setq +org-capture-todo-file "inbox.org")
   (pushnew! org-modules 'org-habit)
   (pushnew! org-link-abbrev-alist
-            '("wiki-zh" . "https://zh.wikipedia.org/wiki/%h")
-            '("wiki"    . "https://en.wikipedia.org/wiki/%s")))
+            '("wiki-zh" . "https://zh.wikipedia.org/wiki/%h")))
 
 ;;;###package org-roam
 (setq org-roam-directory "~/org-roam"
