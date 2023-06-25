@@ -10,18 +10,6 @@
 
 ;;
 ;;; UI
-
-(when IS-WINDOWS
-  (setq doom-font (font-spec :family "Fira Code")))
-
-(when IS-LINUX
-  (setq doom-font (font-spec :family "Fira Code")
-        doom-unicode-font (font-spec :family "Noto Sans CJK SC")))
-
-(when IS-MAC
-  (setq doom-font (font-spec :family "Fira Code" :size 16)
-        doom-unicode-font (font-spec :family "PingFang SC")))
-
 (defadvice! +display-time-on-fullscreen-a (&rest _)
   :after #'toggle-frame-fullscreen
   (if (equal 'fullboth (frame-parameter nil 'fullscreen))
@@ -52,3 +40,4 @@
 (load! "+latex")
 (load! "+map")
 (load! "+wsl")
+(load! "+font")
