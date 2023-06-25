@@ -1,4 +1,4 @@
 ;; -*- no-byte-compile: t; -*-
-;;; input/meow/packages.el
+;;; editor/meow/packages.el
 
 (package! meow)

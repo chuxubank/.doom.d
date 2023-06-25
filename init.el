@@ -2,7 +2,7 @@
 
 (doom! :completion
        company
-       ivy
+       vertico
 
        :input
        (rime +posframe)
@@ -17,14 +17,14 @@
        nav-flash
        ophints
        (popup +defaults)
-       vc-gutter
+       (vc-gutter +pretty)
        window-select
        workspaces
        zen
        beautify
 
        :editor
-       meow
+       (meow +dvorak)
        file-templates
        (format +onsave)
        snippets
@@ -44,6 +44,7 @@
        (spell +flyspell)
 
        :tools
+       biblio
        editorconfig
        (eval +overlay)
        gist
@@ -59,8 +60,7 @@
 
        :lang
        (cc +lsp)
-       (csharp +lsp +dotnet)
-       (:if IS-MAC clojure)
+       clojure
        data
        emacs-lisp
        (json +lsp)
@@ -77,15 +77,15 @@
        (:if IS-MAC (swift +lsp))
        (web +lsp)
        (yaml +lsp)
+       zig
 
        :email
-       (wanderlust +gmail)
+       (mu4e +org +gmail)
 
        :app
        (rss +org)
        leetcode
-       (:unless IS-WINDOWS
-        (telega +url-shorten +alert +mnz))
+       (telega +url-shorten +alert +mnz)
        (emms +ncm)
 
        :config

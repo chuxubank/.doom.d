@@ -23,7 +23,7 @@
          :i "C-j" nil)))
 
 (map! (:leader
-       (:prefix ("a" . "app")
+       (:prefix ("A" . "app")
         (:when (featurep! :app eaf)
          :desc "EAF"            "e" #'eaf)
         (:when (featurep! :app telega)

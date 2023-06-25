@@ -20,8 +20,7 @@
 
 (when IS-MAC
   (setq doom-font (font-spec :family "Fira Code" :size 16)
-        doom-unicode-font (font-spec :family "PingFang SC"))
-  (mac-auto-operator-composition-mode 1))
+        doom-unicode-font (font-spec :family "PingFang SC")))
 
 (defadvice! +display-time-on-fullscreen-a (&rest _)
   :after #'toggle-frame-fullscreen
