@@ -24,7 +24,7 @@
        beautify
 
        :editor
-       (meow +dvorak)
+       meow
        file-templates
        (format +onsave)
        snippets
