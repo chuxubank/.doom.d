@@ -4,23 +4,23 @@
   :commands #'org-drill)
 
 (use-package! org-fc
-  :when (featurep! +fc)
+  :when (modulep! +fc)
   :commands #'org-fc-dashboard
   :config
   (require 'org-fc-hydra))
 
 (use-package! org-media-note
-  :when (featurep! +media-note)
+  :when (modulep! +media-note)
   :hook (org-mode . org-media-note-mode))
 
 (use-package! anki-editor
-  :when (featurep! +anki)
+  :when (modulep! +anki)
   :commands #'anki-editor-insert-note
   :custom
   (anki-editor-latex-style 'mathjax))
 
 (use-package! org-roam-server
-  :when (featurep! +roam-server)
+  :when (modulep! +roam-server)
   :commands #'org-roam-server-open
   :init
   (defun org-roam-server-open()

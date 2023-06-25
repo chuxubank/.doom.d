@@ -13,15 +13,15 @@
   (rime-inline-predicates '(rime-predicate-space-after-cc-p
                             rime-predicate-current-uppercase-letter-p))
   :config
-  (when (featurep! +posframe)
+  (when (modulep! +posframe)
     (setq rime-show-candidate 'posframe
           rime-cursor "˰"
           rime-posframe-style 'vertical))
-  (when (featurep! :editor meow)
+  (when (modulep! :editor meow)
     (setq rime-disable-predicates '(meow-normal-mode-p
                                     meow-motion-mode-p
                                     meow-keypad-mode-p)))
-  (when (featurep! :editor evil)
+  (when (modulep! :editor evil)
     (setq rime-disable-predicates 'rime-predicate-evil-mode-p))
 
   (appendq! rime-disable-predicates '(rime-predicate-hydra-p

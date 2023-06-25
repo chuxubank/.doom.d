@@ -3,7 +3,7 @@
 
 (package! telega :pin "f87858583ca7c0e4328f3373aa57d715fd25bbb7")
 
-(when (featurep! +url-shorten)
+(when (modulep! +url-shorten)
   (package! telega-url-shorten
     :recipe
     (:host github
@@ -11,7 +11,7 @@
      :branch "master"
      :files ("contrib/telega-url-shorten.el"))))
 
-(when (featurep! +alert)
+(when (modulep! +alert)
   (package! telega-alert
     :recipe
     (:host github
@@ -19,7 +19,7 @@
      :branch "master"
      :files ("contrib/telega-alert.el"))))
 
-(when (featurep! +mnz)
+(when (modulep! +mnz)
   (package! language-detection)
   (package! telega-mnz
     :recipe

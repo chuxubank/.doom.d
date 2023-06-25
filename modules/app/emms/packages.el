@@ -3,7 +3,7 @@
 
 (package! emms)
 
-(when (featurep! +ncm)
+(when (modulep! +ncm)
   (package! ncm :recipe (:host github :repo "SpringHan/netease-cloud-music.el"))
   (package! request)
   (package! async))

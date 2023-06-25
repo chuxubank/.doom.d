@@ -8,7 +8,7 @@
         bing-dict-vocabulary-file (expand-file-name "vocabulary.org" org-directory)))
 
 (use-package! anki-vocabulary
-  :when (featurep! +anki)
+  :when (modulep! +anki)
   :commands #'anki-vocabulary
   :custom
   (anki-vocabulary-deck-name "Inbox")

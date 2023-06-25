@@ -1,7 +1,7 @@
 ;;; ui/beautify/config.el -*- lexical-binding: t; -*-
 
 (use-package! nyan-mode
-  :when (featurep! +nyan)
+  :when (modulep! +nyan)
   :custom
   (nyan-animate-nyancat t)
   (nyan-wavy-trail t)
@@ -16,7 +16,7 @@
 
 (use-package! valign
   :config
-  (when (featurep! :app rss)
+  (when (modulep! :app rss)
     (defun elfeed-search-print-valigned-entry (entry)
       "Print valign-ed ENTRY to the buffer."
       (let* ((date (elfeed-search-format-date (elfeed-entry-date entry)))

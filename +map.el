@@ -1,6 +1,6 @@
 ;;; +map.el -*- lexical-binding: t; -*-
 
-(when (featurep! :editor evil)
+(when (modulep! :editor evil)
   (setq! evil-disable-insert-state-bindings t)
   (set-evil-initial-state! '(pdf-annot-list-mode) 'emacs)
   (evil-collection-init '(osx-dictionary))
@@ -24,31 +24,31 @@
 
 (map! (:leader
        (:prefix ("A" . "app")
-        (:when (featurep! :app eaf)
+        (:when (modulep! :app eaf)
          :desc "EAF"            "e" #'eaf)
-        (:when (featurep! :app telega)
+        (:when (modulep! :app telega)
          :desc "Telega"         "t" telega-prefix-map)
-        (:when (featurep! :app leetcode)
+        (:when (modulep! :app leetcode)
          :desc "LeetCode"       "l" #'leetcode)
-        (:when (featurep! :app rss)
+        (:when (modulep! :app rss)
          :desc "Elfeed RSS"     "r" #'elfeed)
-        (:when (featurep! :app emms)
+        (:when (modulep! :app emms)
          (:prefix ("m" . "Multimedia")
           :desc "Emms"          "m" #'emms-smart-browse
-          (:when (featurep! :app emms +ncm)
+          (:when (modulep! :app emms +ncm)
            :desc "Netease Cloud Music"    "n" #'netease-cloud-music))))
 
        (:prefix ("d" . "dictionary")
-        (:when (featurep! :study dict)
+        (:when (modulep! :study dict)
          :desc "Bing"           "b" #'bing-dict-brief)
-        (:when (featurep! :study dict +anki)
+        (:when (modulep! :study dict +anki)
          :desc "Anki"           "a" #'anki-vocabulary)
-        (:when (and (featurep! :tools lookup +dictionary) IS-MAC)
+        (:when (and (modulep! :tools lookup +dictionary) IS-MAC)
          :desc "OSX"            "o" #'osx-dictionary-search-input))
 
        (:prefix ("n" . "notes")
         (:prefix ("r" . "roam")
-         (:when (featurep! :study review +roam-server)
+         (:when (modulep! :study review +roam-server)
           :desc "Open server"   "o" #'org-roam-server-open))))
 
       (:map help-map

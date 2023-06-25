@@ -10,6 +10,7 @@
 
 ;;
 ;;; UI
+
 (defadvice! +display-time-on-fullscreen-a (&rest _)
   :after #'toggle-frame-fullscreen
   (if (equal 'fullboth (frame-parameter nil 'fullscreen))

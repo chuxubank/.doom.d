@@ -8,5 +8,5 @@
   (setq emms-source-file-default-directory "~/Music/"))
 
 (use-package! ncm
-  :when (featurep! +ncm)
+  :when (modulep! +ncm)
   :defer t)

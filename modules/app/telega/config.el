@@ -5,7 +5,7 @@
   :config
   (setq telega-symbol-folder "📁"
         telega-symbol-reply "↫")
-  (when (featurep! :editor evil +everywhere)
+  (when (modulep! :editor evil +everywhere)
     (map! (:map telega-msg-button-map
            "k" nil
            "l" nil
@@ -27,7 +27,7 @@
            :n "C-k" #'telega-button-backward
            :n "q" #'bury-buffer))))
 
-(when (featurep! +modeline)
+(when (modulep! +modeline)
   (setq telega-symbol-online-status (propertize "✈" 'face 'success)
         telega-mode-line-string-format
         '((:eval (telega-mode-line-online-status))
@@ -37,17 +37,17 @@
           (:eval (telega-mode-line-mentions 'messages))))
   (add-hook 'telega-load-hook 'telega-mode-line-mode))
 
-(when (featurep! +url-shorten)
+(when (modulep! +url-shorten)
   (add-hook 'telega-load-hook 'global-telega-url-shorten-mode))
 
-(when (featurep! +alert)
+(when (modulep! +alert)
   (add-hook 'telega-load-hook 'telega-alert-mode))
 
-(when (featurep! +mnz)
+(when (modulep! +mnz)
   (add-hook 'telega-load-hook 'global-telega-mnz-mode))
 
 (use-package! language-detection
-  :when (featurep! +mnz)
+  :when (modulep! +mnz)
   ;; NOTE the `language-detection-string' function is already autoloaded,
   ;; so we can safely defer it.
   :defer t)
