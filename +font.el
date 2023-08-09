@@ -8,5 +8,5 @@
         doom-unicode-font (font-spec :family "Noto Sans CJK SC")))
 
 (when IS-MAC
-  (setq doom-font (font-spec :family "Roboto Mono" :size 16)
+  (setq doom-font (font-spec :family "Fira Code" :size 16)
         doom-unicode-font (font-spec :family "LXGW WenKai")))
